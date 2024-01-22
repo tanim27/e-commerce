@@ -9,7 +9,7 @@ function Card(slide) {
   return (
     <div className="box">
     <Link to={`/productlist/${slide.id}`}><img src={slide.image} alt={slide.title}/></Link>
-    <Link to={`/productlist/${slide.id}`}><img src={slide.hoverimage} className="hover-img"/></Link>
+    <img src={slide.hoverimage} className="hover-img"/>
     
     <div className="hover-icons">
       <button><ion-icon name="heart-outline"></ion-icon></button>
