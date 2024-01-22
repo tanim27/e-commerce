@@ -1,0 +1,54 @@
+
+
+.top-banner .banner .top-img {
+    width: 100%;
+}
+
+.top-banner .banner .moto {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+    transform: translateY(-110%);
+}
+
+
+.top-banner .banner .moto li {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.top-banner .banner .moto a {
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px 10px;
+    border: 1px solid #222;
+    transition: all 0.6s;
+}
+
+.top-banner .banner .moto a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .top-banner {
+        background-color: #eeee;
+    }
+
+    .top-banner .banner .moto {
+        gap: 5px;
+        transform: translateY(-70%);
+    }
+
+    .top-banner .banner .moto a {
+        position: relative;
+        top: 20px;
+        margin-top: 15px;
+    }
+}

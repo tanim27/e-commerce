@@ -1,0 +1,181 @@
+.totalpage .cartpage-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+
+.totalpage .item-amount {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    top: 100px;
+    left: 20px;
+}
+
+.totalpage .line1 {
+    position: relative;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+}
+
+.totalpage .line2 {
+    position: relative;
+    top: 150px;
+    left: 0;
+    width: 100vw;
+}
+
+.totalpage .line3 {
+    position: relative;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    background: #111;
+    color: #111;
+}
+
+.totalpage .productdetail {
+    position: relative;
+    top: 100px;
+    left: 0;
+    height: auto;
+    width: 100vw;
+}
+
+.totalpage .productdetail .static {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #111;
+    padding: 20px;
+}
+
+.totalpage .productdetail .static th {
+   
+}
+
+.totalpage .productdetail h3 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 10px;
+}
+
+.totalpage .productdetail .dynamic {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    margin: 50px;
+}
+
+.totalpage .productdetail .dynamic td {
+
+}
+
+.totalpage .productdetail .dynamic td .product-title img {
+    height: 100px;
+    width: 100px;
+}
+
+.totalpage .productdetail .dynamic td .counter {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    font-size: 1.3rem; 
+}
+
+.totalpage .productdetail .dynamic td .counter button, .productdetail .dynamic td .counter p {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.totalpage .productdetail .dynamic td .counter button, .productdetail .dynamic td .remove-product {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.totalpage .final-list1 {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    top: 110px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.totalpage .final-list1 .total-amount {
+    
+}
+
+.totalpage .final-list1 .remove-button {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    padding: 10px;
+    transition: all 0.6s ease;
+}
+
+.totalpage .final-list1 .remove-button:hover {
+    background: #111;
+    color: #fff;
+}
+
+.totalpage  .final-list2 {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    top: 200px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.totalpage .final-list2 .checkout-button {
+    background-color: #111;
+    color: #fff;
+    font-family: "Playfair Display SC", serif;
+    font-size: 12px;
+    font-weight: 600;
+    height: 40px;
+    margin-bottom: 50px;
+    padding: 10px 30px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+  
+.totalpage .final-list2 .checkout-button:hover{
+    background-color: grey;
+    letter-spacing: 5px;
+}

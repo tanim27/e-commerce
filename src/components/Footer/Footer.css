@@ -1,0 +1,163 @@
+footer {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 300px;
+    height: 10%;
+    width: 100vw;
+    background-color: #eeee;
+}
+
+
+.top-side {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px;
+    gap: 50px;
+}
+
+/* Left Top Side */
+
+.left-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-top h4 {
+    font-size: 1.1rem;
+}
+
+.left-top li {
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .6s all;
+}
+
+.left-top li:hover {
+    transform: translateX(10px);
+}
+
+/*Right Top Side */
+
+.right-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+.right-top form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-top form input {
+    height: 30px;
+    width: 100%;
+    margin: 8px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.right-top form button {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.right-top form button:hover {
+    background-color: grey;
+}
+
+.right-top form button a {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.right-top form button a:hover {
+    color: #111;
+}
+/* Bottom Side */
+
+.bottom-side {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-side .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.bottom-side .icons li {
+    padding: 0 15px;
+    transition: all 0.6s ease;
+}
+
+.icon li a {
+    transition: all 0.6s ease;
+}
+
+.icons li a:hover {
+    color: grey;
+}
+
+.bottom-side p {
+    padding: 5px;
+    margin: 10px;
+}
+
+
+
+@media (max-width:800px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .top-side {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .right-top {
+        margin-left: 0;
+    }
+
+    .bottom-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+}

@@ -1,0 +1,283 @@
+.checkout .checkoutpage-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+
+.checkout .major {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top: 150px;
+    margin: 0 10px;
+    padding: 20px;
+    height: auto;
+    width: 100vw;
+    gap: 40px;
+}
+
+.checkout .major .major-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 50%;
+    gap: 25px;
+}
+
+.checkout .major .major-left .billing-detail-title {
+    position: relative;
+    top: 0;
+}
+
+.checkout .major .major-left .billing-details {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    width: 100%;
+    gap: 10px;
+}
+
+.checkout .major .major-left .billing-details input {
+    font-family: 'Playfair Display', serif;
+    height: 40px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 12px;
+    background: #eeee;
+}
+
+.checkout .major .major-left .billing-details span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+}
+
+.checkout .major .major-left .billing-details span input {
+    height: 15px;
+    width: 15px;
+}
+
+.checkout .major .major-left .billing-details .top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.checkout .major .major-left .billing-details .top1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.checkout .major .major-left .billing-details .top2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.checkout .major .major-left .billing-details .bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.checkout .major .major-left .billing-details .bottom1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.checkout .major .major-left .billing-details .bottom2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.checkout .major .major-right {
+    height: auto;
+    width: 50%;
+}
+
+.checkout .major .major-right .order-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100%;
+    background: #eeee;
+}
+
+.checkout .major .major-right .order-summary .order-summary-title {
+    position: relative;
+    top: 0;
+}
+
+.checkout .major .major-right .order-summary h4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkout .major .major-right .order-summary .item-detail {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 0;
+    left: 50px;
+    height: 150px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.checkout .major .major-right .order-summary .item-detail img {
+    height: 150px;
+    width: 120px;
+}
+
+.checkout .major .major-right .order-summary .item-detail .pieces {
+    position: relative;
+    top: -15px;
+    left: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: paleturquoise;
+}
+
+.checkout .major .major-right .order-summary .item-detail div{
+    position: relative;
+    top: 0;
+}
+
+.checkout .major .major-right .order-summary .subtotal {
+    position: relative;
+    top: 0;
+    left: 50px;
+}
+
+.checkout .major .major-right .payment-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background: #dddd;
+}
+
+.checkout .major .major-right .payment-summary .bill-info {
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    margin: 40px 0;
+    gap: 5px;
+}
+
+.checkout .major .major-right .payment-summary .bill-info div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkout .major .major-right .payment-summary .bill-info .coupon {
+    width: 100%;
+}
+
+.checkout .major .major-right .payment-summary .bill-info .coupon input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    padding: 10px;
+}
+
+.checkout .major .major-right .payment-summary .bill-info .coupon button {
+    font-family: 'Playfair display', serif;
+    text-align: center;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    height: 30px;
+    width: 150px;
+    background: #bbbb;
+    cursor: pointer;
+    transition: .6s all;
+}
+
+.checkout .major .major-right .payment-summary .bill-info .coupon button:hover {
+    color: #111;
+}
+
+.checkout .major .major-right .payment-summary .bill-info span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.checkout .major .major-right .payment-summary .bill-info hr {
+    width: 100%;
+}
+
+.checkout .major .major-right .payment-summary button {
+    font-family: 'Playfair display', serif;
+    height: 30px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    outline: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width:800px) {
+    .checkout .major {
+        flex-direction: column;
+    }
+
+    .checkout .major .major-left {
+        width: 95%;
+    }
+
+    .checkout .major .major-right {
+        width: 95%;
+    }
+}

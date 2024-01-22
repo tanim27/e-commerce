@@ -1,0 +1,260 @@
+.single-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    height: auto;
+    width: 100%;
+    gap: 5px;
+}
+
+.single-product .left {
+    width: 50%;
+}
+
+.single-product .left img {
+    height: 400px;
+    width: 350px;
+    border: 1px solid #111;
+}
+
+.single-product .right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 50%;
+    
+}
+
+.single-product .right h1 {
+    font-weight: 200;
+    position: relative;
+    top: 0;
+}
+
+.single-product .right .second-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+    width: 90%;
+}
+
+.single-product .right .second-line .leftside {
+    display: flex;
+    height: 50px;
+    width: 100px;
+   
+}
+
+.single-product .right .second-line .leftside h3 {
+    display: flex;
+    font-size: 2rem;
+}
+
+.single-product .right .third-line {
+    font-family: "Playfair Display", serif;
+    height: auto;
+    width: 90%;
+  
+}
+
+.single-product .right .third-line ul button {
+    font-family: "Playfair Display", serif;
+    height: 30px;
+    width: 80px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: .6s all;
+}
+
+.single-product .right .third-line ul button:hover {
+    background: #111;
+    color: #fff;
+}
+
+.single-product .right .fourth-line {
+    font-family: "Playfair Display", serif;
+    height: auto;
+    width: 90%;
+    
+}
+
+.single-product .right .fourth-line ul button {
+    font-family: "Playfair Display", serif;
+    height: 30px;
+    width: 40px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: .6s all;
+}
+
+.single-product .right .fourth-line ul button:hover {
+    background: #111;
+    color: #fff;
+}
+
+.single-product .right .fifth-line {
+    font-family: "Playfair Display", serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+    width: 90%;
+    gap: 10px;
+    
+}
+
+.single-product .right .sixth-line {
+    font-family: "Playfair Display", serif;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    height: 30px;
+    width: 90%;
+    gap: 10px;
+    
+}
+
+.single-product .right .sixth-line .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30px;
+    width: 25%;
+    padding: 5px;
+    border: none;
+    background: #bbb;
+}
+
+.single-product .right .sixth-line .left button, .single-product .right .sixth-line .left p {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.single-product .right .sixth-line .right {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 30px;
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #111;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.6s all;
+}
+
+.single-product .right .sixth-line .right:hover {
+    background: #111;
+    color: #fff;
+}
+
+.single-product .right .seventh-line {
+    height: 30px;
+    width: 90%;
+}
+
+.single-product .right .seventh-line button {
+    font-family: 'Playfair Display', serif;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #111;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: .6s all;
+    background: #111;
+    color: #fff;
+}
+
+.single-product .right .seventh-line button:hover {
+    opacity: 2;
+}
+
+.single-product .right .last-line {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    max-width: 90%;
+    width: 90%;
+    margin: 5px;
+    gap: 20px;
+}
+
+.single-product .right .last-line p {
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.single-product .right .last-line p ion-icon {
+    font-size: 1.1rem;
+}
+
+.single-product .right .delivery-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 40px;
+    width: 90%;
+    margin: 15px 5px;
+    gap: 5px;
+}
+
+.single-product .right .delivery-description p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40px;
+    width: 90%;
+    gap: 10px;
+}
+
+.single-product .right .delivery-description p ion-icon {
+    font-size: 1.1rem;
+}
+
+.single-product .right .delivery-description p span {
+    color: grey;
+}
+
+@media (max-width: 800px) {
+    .single-product {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .single-product .left {
+        width: 100%;
+    }
+
+    .single-product .right {
+        width: 100%;
+    }
+}

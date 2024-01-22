@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-signin .sign-in {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    border-radius: 10px;
+    outline: 1px solid;
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+    overflow: hidden;
+    z-index: 1100;
+    background-color: #fff;
+}
+
+.container-signin .close-signin {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 1.6rem;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+.container-signin .sign-in h1{
+    text-align: center;
+}
+
+.container-signin .sign-in .social-icons {
+    margin: 20px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-signin .sign-in .social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    border: 1px solid #111;
+    border-radius: 20%;
+    font-size: 18px;
+    transition: all 0.6s ease;
+}
+
+.container-signin .sign-in .social-icons a:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+.container-signin .sign-in span{
+    font-size: 14px;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.container-signin .sign-in input{
+    background-color: #eeee;
+    width: 120%;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.container-signin .sign-in button{
+    background-color: #111;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.container-signin .sign-in button:hover {
+    background-color: grey;
+}
+
+.container-signin .sign-in button a {
+    color: #fff;
+}
+
+.container-signin .sign-in button a:hover {
+    color: #111;
+}
+
+@media (max-width: 900px) {
+    .container-signin .sign-in {
+        width: 80%;
+        padding: 30px;
+    }
+}

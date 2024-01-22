@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display SC', serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeee;
+    height: 50px;
+    width: 100%;
+}
+
+/* Left-side */
+
+.header-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+.left-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.left-inline div {
+    margin: 5px;
+}
+
+.disclaimer {
+    position: relative;
+    bottom: 5px;
+    margin: 5px;
+    font-size: 1.7rem;
+}
+
+.heart-icon {
+    position: relative;
+    top: 0;
+    font-size: 1.4rem;
+}
+
+.menu-icon {
+    font-size: 1.6rem;
+    display: none;
+}
+
+
+/* Center-side */
+
+.header-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 11%;
+    padding: 5px 20px;
+    width: 100%;
+    gap: 180px;
+}
+
+.navigations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigations li {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.navigations li:hover {
+    background-color: #bbbb;
+}
+
+.close-icon {
+    display: none;
+}
+
+.branding {
+    position: relative;
+    bottom: 7px;
+    right: 38%;
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+
+/* Right-side */
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+}
+
+.right-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.right-inline .right-icon {
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.right-inline .right-icon:hover {
+    color: grey;
+}
+
+
+/* Media querry */
+
+@media (max-width: 1150px) {
+
+/* Left-side */
+
+.header-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+.left-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.left-inline div {
+    margin: 5px;
+}
+
+.disclaimer {
+    position: relative;
+    bottom: 4px;
+    margin: 5px;
+    font-size: 1.5rem;
+}
+
+.heart-icon {
+    position: relative;
+    top: 0;
+    font-size: 1.3rem;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* Center-side */
+
+.header-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 6%;
+    padding: 5px 20px;
+    width: 100%;
+    gap: 150px;
+    font-size: 0.9rem;
+}
+
+.navigations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigations li {
+    margin: 10px;
+    transition: all 0.5s ease;
+}
+
+.close-icon {
+    display: none;
+}
+
+.branding {
+    position: relative;
+    bottom: 4px;
+    right: 43%;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+/* Right-side */
+
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+}
+
+.right-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.right-inline .right-icon {
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+}
+
+
+@media (max-width: 900px) {
+
+/* Left */
+
+.left-inline {
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+/* Center */
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    height: 100vh;
+    width: 40%;
+    background: #eeee;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.navbar.navbar-active {
+    left: 0;
+}
+
+.navigations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.navigations li {
+    position: relative;
+    top: 50px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.navigations li:hover {
+    background-color: #bbbb;
+}
+
+.close-icon {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.branding {
+    display: inline;
+    position: absolute;
+    top: 4px;
+    right: 42%;
+    font-size: 1.6rem;
+}
+
+/* Right */
+
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+}
+    
+.right-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    position: relative;
+    bottom: 2px;
+}
+    
+.right-inline .right-icon {
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+    
+}
+
+/* searcbar css */
+
+.searchbar {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100vw;
+    background: #fff;
+    z-index: 200;
+}
+
+.searchbar .searchbox  {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 5px;
+    height: 50px;
+    width: 100vw;
+}
+
+.searchbar .searchbox form {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    gap: 10px;
+}
+
+.searchbar .searchbox form .searchbox-icons {
+    position: relative;
+    top: 5px;
+    left: 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.searchbar .searchbox form .searchbox-icons:hover {
+    color: grey;
+}
+
+.searchbar .searchbox form input {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.searchbar .product-description {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 110px;
+    width: 100%;
+    background: #dddd;
+}
+
+.searchbar .product-description img {
+    position: relative;
+    top: 5px;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+.searchbar .product-description .detail {
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+@media (max-width:900px) {
+    .searchbar .searchbox {
+        left: 10px;
+        width: 93%;
+        font-size: 0.7rem;
+    }
+}

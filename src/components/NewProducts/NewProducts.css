@@ -1,0 +1,146 @@
+.new-arrival-heading {
+    font-family: "Playfair Display", serif;
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+}
+
+.wrapper .manual-swiper {
+    position: relative;
+    top: 325px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 30px;
+}
+
+.wrapper .manual-swiper .manual-buttons {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #111;
+    border-radius: 15px;
+    background: none;
+    cursor: pointer;
+}
+
+.wrapper .manual-swiper .manual-buttons:hover {
+    background: #111;
+    color: #fff;
+}
+
+.wrapper .container {
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 150px;
+    margin-bottom: 50px;
+}
+
+.wrapper .container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%; 
+    overflow: hidden;
+    
+}
+
+.wrapper .container .box img {
+    width: 100%;
+    transition: all linear 0.4s;
+}
+
+.wrapper .container .box:hover img {
+    opacity: 0;
+}
+
+.wrapper .container .box .hover-img {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 70%;
+}
+
+.wrapper .container .box:hover .hover-img {
+    opacity: 1;
+}
+
+.wrapper .container .box .hover-icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    font-size: 1.5rem;
+    gap: 5px;
+    z-index: -5;
+    transform: translateY(0);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.wrapper .container .box:hover .hover-icons {
+    opacity: 1;
+    transform: translateY(-60px);
+    z-index: 5;
+}
+
+.wrapper .container .box .hover-icons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px 10px;
+    overflow: hidden;
+    font-size: 1.3rem;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.wrapper .container .box .hover-icons button:hover {
+    color: #fff;
+    background-color: #111;
+}
+
+.wrapper .container .box .product-title {
+    font-family: "Playfair Display", serif;
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:700px) {
+    .wrapper .container .box {
+        max-width: 50%; 
+    }
+
+    .wrapper .container .box .hover-img {  
+        width:50%;
+    }
+}

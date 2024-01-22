@@ -1,0 +1,51 @@
+h2 {
+    position: relative;
+    top: 60px;
+    text-align: center;
+    z-index: 10;
+}
+
+.single-tip {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    gap: 20px;
+    
+}
+
+.single-tip a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display',serif;
+    text-decoration: none;
+    font-size: 14px;
+    height: 30px;
+    width: 60px;
+    margin: 5px;
+    padding: 15px 50px;
+    border: 1px solid #222;
+    transition: 0.6s;
+}
+
+.single-tip a:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.single-tip h4 {
+    font-family: 'Playfair Display',serif;
+    font-weight: 500;
+}
+
+@media (max-width:600px) {
+    h2 {
+        position: relative;
+        top: 60px; 
+    }
+}
