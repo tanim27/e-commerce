@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import {useCart} from "react-use-cart"
-import AllProductDetails from '../ProductsCategory/AllProductDetails'
-import "./SingleProductDetails.css"
+import {useCart} from 'react-use-cart'
+import { useParams, Link } from 'react-router-dom'
+import { AllProductsData } from './../../LocalStorage/AllProductDetails'
+import './SingleProductDetails.css'
 
-function SingleProductDetails(props) {
-    const [product,setProduct] = useState();
+function SingleProductDetails() {
+    const [product,setProduct] = useState()
+    const [selectedColor, setSelectedColor] = useState()
+    const [selectedSize, setSelectedSize] = useState()
+
+    const {items,addItem,updateItemQuantity} = useCart()
     const { id } = useParams()
-    const colors = ["Blue", "Green", "Brown", "Pink"];
-    const sizes = ["s", "m", "l", "xl", "xxl"];
-    const [selectedColor, setSelectedColor] = useState("");
-    const [selectedSize, setSelectedSize] = useState("")
-    const {items,addItem,updateItemQuantity} = useCart();
     
+    const colors = ["Blue", "Green", "Brown", "Pink"]
+    const sizes = ["s", "m", "l", "xl", "xxl"]
     
     useEffect(()=> {
-        const product = AllProductDetails.find(x => x.id === id)
+        const product = AllProductsData.find(x => x.id === id)
 
         setProduct(product)
     },[id])
@@ -90,7 +91,7 @@ function SingleProductDetails(props) {
             </div>
 
             <div className="seventh-line">
-              <button>Buy now</button>
+              <Link to="/billing"><button>Buy now</button></Link>
             </div>
             
             <div className="last-line">

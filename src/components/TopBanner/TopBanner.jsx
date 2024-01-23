@@ -1,5 +1,5 @@
-import React from "react";
-import "./TopBanner.css";
+import React from 'react'
+import './TopBanner.css'
 
 function TopBanner() {
     return (
@@ -8,14 +8,16 @@ function TopBanner() {
             <div className="banner">
                 <img className="top-img" src="./assets/slider_01.jpg" alt="top-img"/>
                 <div className="moto">
-                    <li>Shop better</li>
-                    <li>get the best experience</li>
-                    <a href="">Shop Now</a>
+                    <div>
+                        <li>Shop better</li>
+                        <li>get the best experience</li>
+                    </div>
+                    <p>Shop Now</p>
                 </div>
             </div>
             </section>
         </div>
-    );
+    )
 }
 
-export default TopBanner;
+export default TopBanner

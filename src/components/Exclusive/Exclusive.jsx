@@ -1,5 +1,5 @@
-import React from "react";
-import "./Exclusive.css";
+import React from 'react'
+import './Exclusive.css'
 
 function Exclusive() {
     return (
@@ -47,7 +47,7 @@ function Exclusive() {
                 </div>
             </section>
         </div>
-    );
+    )
 }
 
-export default Exclusive;
+export default Exclusive

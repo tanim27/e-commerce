@@ -1,19 +1,14 @@
-import React, {useEffect, useRef, useState} from 'react';
-import AllProductDetails from './AllProductDetails'; 
-import Card from './Card'; 
+import React, {useEffect, useRef, useState} from 'react'
+import { AllProductsData } from './../../LocalStorage/AllProductDetails'
+import Card from './Card'
+import './AllProducts.css'
 
 function AllProducts() {
   const [allMenuOpen, setAllMenuOpen] = useState(false);
-
-  function allmenuclick() {
-   setAllMenuOpen(!allMenuOpen); 
-  }
-
-  const options = ["All Products", "Sweater", "Hoodie","Shirt"];
   const [selected, setSelected] = useState("All Products");
-  const filteredData = selected === "All Products" ? AllProductDetails : AllProductDetails.filter((x) => x.category === selected.toLowerCase());
-
-  let menuRef = useRef();
+  const menuRef = useRef()
+  const options = ["All Products", "Sweater", "Hoodie","Shirt"]
+  const filteredData = selected === "All Products" ? AllProductsData : AllProductsData.filter((x) => x.category === selected.toLowerCase())
   
   useEffect(() => {
     let handler = (event) => {
@@ -21,11 +16,13 @@ function AllProducts() {
         setAllMenuOpen(false);
       }
     }
+    document.addEventListener("click", handler)
+    return () => {document.removeEventListener("click", handler)}
+  },[])
 
-    document.addEventListener("click", handler);
-
-    return () => {document.removeEventListener("click", handler);};
-  },[]);
+  function allmenuclick() {
+    setAllMenuOpen(!allMenuOpen)
+   }
   
   return (
     <div>
@@ -49,7 +46,7 @@ function AllProducts() {
         ))}
       </div>
   </div>
-  );
+  )
 }
 
-export default AllProducts;
+export default AllProducts

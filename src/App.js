@@ -1,19 +1,20 @@
 import React from 'react';
-import {Routes, Route} from "react-router-dom";
-import HomePage from './HomePage/Home';
-import AllProductsPage from './AllProductsPage/AllProductsPage';
-import CartPage from "./CartPage/CartPage";
-import CheckOutPage from './CheckOutPage/CheckOutPage';
-import SingleProductDetailsPage from './SingleProductDetailsPage/SingleProductDetailsPage';
+import {Routes, Route} from 'react-router-dom'
+
+import HomePage from './Pages/HomePage/Home'
+import ProductsCategoryPage from './Pages/ProductsCategoryPage/ProductsCategoryPage'
+import SingleProductDetailsPage from './Pages/SingleProductDetailsPage/SingleProductDetailsPage'
+import CartPage from "./Pages/CartPage/CartPage"
+import CheckOutPage from './Pages/CheckOutPage/CheckOutPage'
 
 function App() {
   return (
     <Routes>
-        <Route path='/' element={<HomePage/>}></Route>
-        <Route path='/productlist' element={<AllProductsPage/>}> </Route>
-        <Route path='/productlist/:id' element={<SingleProductDetailsPage/>}></Route>
-        <Route path='/cart' element={<CartPage/>}> </Route>
-        <Route path='/billing' element={<CheckOutPage/>}></Route>
+      <Route path='/' element={<HomePage/>}></Route>
+      <Route path='/productlist' element={<ProductsCategoryPage/>}> </Route>
+      <Route path='/productlist/:id' element={<SingleProductDetailsPage/>}></Route>
+      <Route path='/cart' element={<CartPage/>}> </Route>
+      <Route path='/billing' element={<CheckOutPage/>}></Route>
     </Routes>
   )
 }

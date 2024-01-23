@@ -1,10 +1,10 @@
-import React from 'react';
-import { useCart } from 'react-use-cart';
-import "./AllProducts.css";
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { useCart } from 'react-use-cart'
+import { Link } from 'react-router-dom'
+import './AllProducts.css'
 
 function Card(props) {
-  const {addItem} = useCart();
+  const {addItem} = useCart()
 
   return (
       <div className="box">

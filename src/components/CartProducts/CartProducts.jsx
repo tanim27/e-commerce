@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import "./CartProducts.css";
-import {useCart} from "react-use-cart"
-import { Link } from 'react-router-dom';
+import React from 'react'
+import {useCart} from 'react-use-cart'
+import { Link } from 'react-router-dom'
+import './CartProducts.css'
 
 function CartProducts() {
   const {
@@ -13,7 +13,7 @@ function CartProducts() {
     updateItemQuantity,
     removeItem,
     emptyCart
-  } = useCart();
+  } = useCart()
 
   return (
     <div>
@@ -73,4 +73,4 @@ function CartProducts() {
   )
 }
 
-export default CartProducts;
+export default CartProducts

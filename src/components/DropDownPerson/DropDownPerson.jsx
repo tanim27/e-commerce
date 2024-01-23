@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import "./DropDownPerson.css";
+import React from 'react'
+import './DropDownPerson.css'
 
 function DropDownPerson({closepopup,loginModalOpen,signupModalOpen}) {
   
-
   function loginclick() {
     loginModalOpen()
     closepopup()
@@ -21,7 +20,7 @@ function DropDownPerson({closepopup,loginModalOpen,signupModalOpen}) {
         <li className="signup" onClick={signupclick}>SignUp</li>
       </ul>
     </div>
-  );
+  )
 }
 
-export default DropDownPerson;
+export default DropDownPerson

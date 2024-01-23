@@ -1,11 +1,13 @@
-import React, { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/scrollbar';
-import "./Tips.css";
+import React from 'react'
 
-export default function Tips() {
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Scrollbar } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/scrollbar'
+
+import './Tips.css'
+
+function Tips() {
   const BreakPoint = {
     475: {
       slidesPerView: 1,
@@ -52,6 +54,7 @@ export default function Tips() {
     </div>
 </Swiper>
 </>
-  );
+  )
 }
 
+export default Tips

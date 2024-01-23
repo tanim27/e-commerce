@@ -1,11 +1,12 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react'
+import './Footer.css'
 
 function Footer () {
     return (
         <div>
             <footer>
                 <div className="top-side">
+                    <div className="left">
                     <div className="left-top">
                         <h4>Information</h4>
                         <li>Deliveries</li>
@@ -27,6 +28,8 @@ function Footer () {
                         <li>+9912991199</li>
                         <li>blaa@domain.com</li>
                     </div>
+                    </div>
+                    
                     <div className="right-top">
                         <h3>Good Emails</h3>
                         <p>Enter your email below and connect to be the first to know about our new collection and product launches</p>
@@ -51,7 +54,7 @@ function Footer () {
                 </div>
             </footer>
         </div>
-    );
+    )
 }
 
-export default Footer;
+export default Footer

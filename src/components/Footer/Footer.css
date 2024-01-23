@@ -11,7 +11,6 @@ footer {
     background-color: #eeee;
 }
 
-
 .top-side {
     display: flex;
     justify-content: center;
@@ -20,9 +19,16 @@ footer {
     gap: 50px;
 }
 
-/* Left Top Side */
+/* Left Top Side */ 
+.top-side .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
 
-.left-top {
+.top-side .left .left-top {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -61,6 +67,7 @@ footer {
 }
 
 .right-top form input {
+    font-family: 'Playfair Display', serif;
     height: 30px;
     width: 100%;
     margin: 8px 0;
@@ -139,14 +146,15 @@ footer {
 
 
 
-@media (max-width:800px) {
-    footer {
-        flex-direction: column;
-    }
-
+@media (max-width:600px) {
+   
     .top-side {
         flex-direction: column;
         padding: 50px;
+    }
+
+    .top-side .left {
+        gap: 30px;
     }
 
     .right-top {

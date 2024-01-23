@@ -1,16 +1,15 @@
-import React, {useRef, useState} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import React from 'react'
+import { NewProductsData } from './../../LocalStorage/AllProductDetails'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/pagination'
 
-import newArrived from "./NewProductDetails";
-import Card from './Card';
-import "./NewProducts.css";
+import Card from './Card'
+import './NewProducts.css'
 
-export default function NewProducts () {
-
-    const slideref = useRef();
+function NewProducts () {
 
     const BreakPoint = {
         500: {
@@ -22,7 +21,7 @@ export default function NewProducts () {
         900: {
           slidesPerView: 3,
         },
-      };
+      }
 
   return (
     <>
@@ -41,10 +40,9 @@ export default function NewProducts () {
         spaceBetween={20}
         breakpoints={BreakPoint}
         className="mySwiper"
-        ref={slideref}
       > 
       
-      {newArrived.map(product => (
+      {NewProductsData.map(product => (
         <SwiperSlide>
           <div className="container">
             <Card key={product.id} {...product} product={product}/>
@@ -55,5 +53,8 @@ export default function NewProducts () {
     </Swiper>
     </div>
     </>
-  );
+  )
 }
+
+
+export default NewProducts

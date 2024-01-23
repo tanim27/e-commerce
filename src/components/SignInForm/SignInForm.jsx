@@ -1,6 +1,6 @@
-import React,{useState} from "react";
-import ReactModal from "react-modal";
-import "./SignInForm.css";
+import React from 'react'
+import ReactModal from 'react-modal'
+import './SignInForm.css'
 
 function SignInForm ({visible,close}) {
     
@@ -44,7 +44,7 @@ style={{
             </section>
 </ReactModal>
         </div>
-    );
+    )
 }
 
-export default SignInForm;
+export default SignInForm

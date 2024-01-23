@@ -1,9 +1,7 @@
-// ProductsCategory.jsx
-
-import React, { useEffect, useState } from "react";
-import AllProductDetails from "./AllProductDetails";
-import Card from "./Card";
-import "./ProductsCategory.css";
+import React, { useState } from 'react'
+import { AllProductsData } from './../../LocalStorage/AllProductDetails'
+import Card from './Card'
+import './ProductsCategory.css'
 
 function ProductsCategory() {
   const options = ["All Products", "Sweater", "Hoodie", "Shirt"];
@@ -18,14 +16,14 @@ function ProductsCategory() {
   const [selectedSize, setSelectedSize] = useState("All")
   const [selectedColor, setSelectedColor] = useState("All");
 
-  const filteredData = AllProductDetails.filter(
+  const filteredData = AllProductsData.filter(
     (x) =>
       (selected === "All Products" || x.category === selected.toLowerCase()) &&
-      (selectedGender === "All" || x.gendercategory === selectedGender.toLocaleLowerCase()) && 
-      (selectedPrice === "All" || x.price === selectedPrice.toLocaleLowerCase()) &&
-      (selectedSize === "All" || x.size === selectedSize.toLocaleLowerCase()) && 
+      (selectedGender === "All" || x.gendercategory === selectedGender.toLowerCase()) && 
+      (selectedPrice === "All" || x.price === selectedPrice.toLowerCase()) &&
+      (selectedSize === "All" || x.size === selectedSize.toLowerCase()) && 
       (selectedColor === "All" || x.color === selectedColor.toLowerCase())
-  );
+  )
 
   return (
     <div>
@@ -50,7 +48,6 @@ function ProductsCategory() {
           ))}
         </div>
         
-
         <div className="leftbar">
           <div className="categorylist">
             <h3>Category</h3>
@@ -96,7 +93,7 @@ function ProductsCategory() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ProductsCategory;
+export default ProductsCategory

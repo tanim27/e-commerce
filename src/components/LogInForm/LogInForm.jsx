@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ReactModal from "react-modal";
-import "./LogInForm.css";
+import React from 'react'
+import ReactModal from 'react-modal'
+import './LogInForm.css'
 
 function LogInForm({ visible, close }) {
   return (
@@ -43,7 +43,7 @@ function LogInForm({ visible, close }) {
         </section>
       </ReactModal>
     </div>
-  );
+  )
 }
 
-export default LogInForm;
+export default LogInForm

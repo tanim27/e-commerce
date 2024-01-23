@@ -1,10 +1,10 @@
 import React from 'react'
-import "./CheckOut.css"
 import { useCart } from 'react-use-cart'
+import './CheckOut.css'
 
 function CheckOut() {
-  const {items,isEmpty,cartTotal} = useCart();
-  const vat = cartTotal*0.1;
+  const {items,isEmpty,cartTotal} = useCart()
+  const vat = cartTotal*0.1
 
   return (
     <div>

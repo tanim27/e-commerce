@@ -1,52 +1,48 @@
-import React, {useRef, useEffect, useState} from "react";
-import DropDownPerson from "../DropDownPerson/DropDownPerson";
-import { Link } from "react-router-dom";
-import { useCart } from 'react-use-cart';
+import React, {useRef, useEffect, useState} from 'react'
+import { useCart } from 'react-use-cart'
+import { Link } from 'react-router-dom'
+import { AllProductsData } from './../../LocalStorage/AllProductDetails'
 
-import LogInForm from "../LogInForm/LogInForm";
-import SignInForm from "../SignInForm/SignInForm";
+import DropDownPerson from '../DropDownPerson/DropDownPerson'
+import LogInForm from '../LogInForm/LogInForm'
+import SignInForm from '../SignInForm/SignInForm'
 
-import AllProductDetails from "../AllProducts/AllProductDetails";
-import SearchProductCard from "./SearchProductCard";
-
-import "./Navigation.css";
+import SearchProductCard from './SearchProductCard'
+import './Navigation.css'
 
 function Navigation() {
-    const [loginModalOpen, setLoginModalOpen] = useState(false);
-    const [signupModalOpen, setSignupModalOpen] = useState(false);
-
-    const {totalItems} = useCart();
-
-    const [isNavbarActive, setIsNavbarActive] = useState(false);
-    const toggleNavbar = () => {
-        setIsNavbarActive(!isNavbarActive);
-    };
-
-    const [searchBoxOpen, setsearchBoxOpen] = useState(false);
-    function searchclick () {
-        setsearchBoxOpen(!searchBoxOpen);
-    }
-
-    const [isPersonOpen, setIsPersonOpen] = useState(false);
-    function personclick () {
-        setIsPersonOpen(!isPersonOpen);
-    }
-
+    const [isNavbarActive, setIsNavbarActive] = useState(false)
+    const [searchBoxOpen, setsearchBoxOpen] = useState(false)
+    const [isPersonOpen, setIsPersonOpen] = useState(false)
+    const [loginModalOpen, setLoginModalOpen] = useState(false)
+    const [signupModalOpen, setSignupModalOpen] = useState(false)
     const [products, setProducts] = useState([])
+    const {totalItems} = useCart()
+
+    function toggleNavbar () {
+        setIsNavbarActive(!isNavbarActive)
+    }
+
+    function searchclick () {
+        setsearchBoxOpen(!searchBoxOpen)
+    }
+
+    function personclick () {
+        setIsPersonOpen(!isPersonOpen)
+    }
 
     const handleSearch = (e) => {
         if (e.target.value.length === 0) {
-            setProducts([]);
-            return;
-          }        
+            setProducts([])
+            return
+        }        
 
-        const filteredProducts = AllProductDetails.filter(x =>
+        const filteredProducts = AllProductsData.filter(x =>
             x.title.toLowerCase().includes(e.target.value.toLowerCase())
-          );
+          )
 
-        setProducts(filteredProducts);
+        setProducts(filteredProducts)
     }
-
 
     return (
 <div>
@@ -65,12 +61,11 @@ function Navigation() {
         <div className="close-icon" onClick={toggleNavbar}><ion-icon name="close"></ion-icon></div>
         <div className="navigations">
             <Link to="/"><li className="navigation-bottom">Home</li></Link>
-            <Link to="/productlist"><li className="navigation-bottom">Products</li></Link>
-            
+            <Link to="/productlist"><li className="navigation-bottom">Products</li></Link>  
         </div>
         <div className="navigations">
-            <li className="navigation-bottom"><a href="">Specials</a></li>
-            <li className="navigation-bottom"><a href="">Sale</a></li>
+            <li className="navigation-bottom">Specials</li>
+            <li className="navigation-bottom">Sale</li>
         </div>
     </div>
     <div className="branding">BiShop</div>
@@ -88,8 +83,8 @@ function Navigation() {
 </header>
 
 {
-   isPersonOpen && <DropDownPerson signupModalOpen={()=>setSignupModalOpen(true)} loginModalOpen={()=>setLoginModalOpen(true)} closepopup={()=>setIsPersonOpen(false)}/>
-   
+   isPersonOpen && 
+   <DropDownPerson signupModalOpen={()=>setSignupModalOpen(true)} loginModalOpen={()=>setLoginModalOpen(true)} closepopup={()=>setIsPersonOpen(false)}/>
 }
 
 {loginModalOpen && <LogInForm visible={loginModalOpen} close={()=>setLoginModalOpen(false)} />}
@@ -111,7 +106,8 @@ function Navigation() {
 </div>
 }
 
-</div>)
+</div>
+)
 }
 
-export default Navigation;
+export default Navigation
