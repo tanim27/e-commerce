@@ -1,41 +1,60 @@
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title h2 {
-    font-family: "Playfair Display", serif;
-    position: relative;
-    top: 100px;
-    left: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.title h2 span {
-    position: relative;
-    top: 3px;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-}
-
-.title span ul {
-    font-family: "Playfair Display", serif;
-    position: relative;
-    top: 80px;
-    right: 140px;
+.product-showlist {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    height: auto;
+    width: 100vw;
+}
+
+.product-showlist .title {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.product-showlist .title h2 {
+    font-family: "Playfair Display", serif;
+    position: relative;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 180px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.product-showlist .title h2 span {
+    position: relative;
+    top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-showlist .title .menubar {
+    position: relative;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 115px;
+    width: 180px;
+}
+
+.product-showlist .title .menubar ul {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     box-shadow: 1px 1px 10px 6px rgba(0, 0, 0, 0.6);
     background-color: #eeee;
     height: 115px;
@@ -43,22 +62,22 @@
     z-index: 20;
 }
 
-.title span ul li {
+.product-showlist .title .menubar ul li {
     display: flex;  
     justify-content: center;
     align-items: center;
-    width: 140px;
+    width: 180px;
     padding: 10px 0;
     overflow: hidden;
     cursor: pointer;
 }
 
-.title span ul li:hover {
+.product-showlist .title .menubar ul li:hover {
     color: #fff;
     background-color: #111;
 }
 
-.box-container {
+.product-showlist .box-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +95,7 @@
     margin: auto auto 150px auto;
 }
 
-.box-container .box {
+.product-showlist .box-container .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,18 +108,18 @@
     width: 236px;
 }
 
-.box-container .box img {
+.product-showlist .box-container .box img {
     border-radius: 8px 8px 0 0;
     width: 100%;
     transform: scale(1);
     transition: all linear 0.4s;
 }
 
-.box-container .box:hover img {
+.product-showlist .box-container .box:hover img {
     transform: scale(1.1);
 }
 
-.box-container .box .hover-icons {
+.product-showlist .box-container .box .hover-icons {
     position: relative;
     display: flex;
     justify-content: center;
@@ -116,13 +135,13 @@
     overflow: hidden;
 }
 
-.box-container .box:hover .hover-icons {
+.product-showlist .box-container .box:hover .hover-icons {
     opacity: 1;
     transform: translateY(-40px);
     z-index: 5;
 }
 
-.box-container .box .hover-icons button {
+.product-showlist .box-container .box .hover-icons button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,12 +158,12 @@
     cursor: pointer;
 }
 
-.box-container .box .hover-icons button:hover {
+.product-showlist .box-container .box .hover-icons button:hover {
     color: #fff;
     background-color: #111;
 }
 
-.box-container .box .product-title {
+.product-showlist .box-container .box .product-title {
     font-family: "Playfair Display", serif;
     position: relative;
     bottom: 20px;
@@ -155,13 +174,13 @@
 }
 
 @media (min-width:400px) {
-    .box-container {
+    .product-showlist .box-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .box-container .box {
+    .product-showlist .box-container .box {
         max-width: 50%; 
     }
 
