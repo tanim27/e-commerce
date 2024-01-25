@@ -379,13 +379,14 @@ header {
   top: 0;
   left: 5px;
   height: 50px;
-  width: 100vw;
+  width: 93%;
+  font-size: 0.7rem;
 }
 
 .searchbar .searchbox form {
   position: relative;
   top: 10px;
-  left: 10px;
+  left: 5px;
   display: flex;
   height: 50px;
   width: 100%;
@@ -442,12 +443,4 @@ header {
 
 .searchbar .product-description .detail p {
   font-family: "Playfair display", serif;
-}
-
-@media (max-width: 900px) {
-  .searchbar .searchbox {
-    left: 10px;
-    width: 93%;
-    font-size: 0.7rem;
-  }
 }
