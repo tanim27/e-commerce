@@ -29,7 +29,7 @@ function AllProducts() {
 
     <div className="product-showlist">
       <div className="title">
-      <div className="category-title" ref={menuRef} onClick={allmenuclick}><h2>{selected}<span><ion-icon name="chevron-down-sharp"></ion-icon></span></h2></div>
+        <h2 className="category-title" ref={menuRef} onClick={allmenuclick}>{selected}<span><ion-icon name="chevron-down-sharp"></ion-icon></span></h2>
         <div className="menubar">
           {allMenuOpen && 
           <ul className="menu">

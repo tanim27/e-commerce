@@ -1,4 +1,6 @@
 .product-showlist {
+  position: relative;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +11,7 @@
 
 .product-showlist .title {
   position: relative;
-  top: 100px;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,21 +20,16 @@
 }
 
 .product-showlist .title .category-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  cursor: pointer;
-}
-
-.product-showlist .title .category-title h2 {
+  position: relative;
+  left: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
-.product-showlist .title .category-title h2 span {
+.product-showlist .title .category-title span {
   position: relative;
   top: 2px;
   display: flex;
@@ -80,21 +77,16 @@
 }
 
 .product-showlist .box-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  top: 200px;
+  top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
-  width: 80%;
-  padding-bottom: 150px;
-
+  width: 100%;
   gap: 20px;
-  margin: auto auto 150px auto;
+  margin: auto;
 }
 
 .product-showlist .box-container .box {
@@ -175,14 +167,15 @@
   align-items: center;
 }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   .product-showlist .box-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90%;
   }
 
   .product-showlist .box-container .box {
-    max-width: 50%;
+    max-width: 45%;
   }
 }
