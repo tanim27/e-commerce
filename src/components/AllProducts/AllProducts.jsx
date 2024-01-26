@@ -23,28 +23,28 @@ function AllProducts() {
   function allmenuclick() {
     setAllMenuOpen(!allMenuOpen)
    }
-  
+
   return (
-    <div>
-      <div className="title" ref={menuRef} onClick={allmenuclick}>
-        <h2>{selected}
-          <span><ion-icon name="chevron-down-sharp"></ion-icon></span>
-          <span>
-            {
-              allMenuOpen && 
-              <ul className="menu">
-                {options.map((option) => (<li onClick={(e) => {setSelected(option)}}>{option}</li>))}
-              </ul>
-            }
-          </span>
-        </h2>
+  <div>
+
+    <div className="product-showlist">
+      <div className="title">
+      <div className="category-title" ref={menuRef} onClick={allmenuclick}><h2>{selected}<span><ion-icon name="chevron-down-sharp"></ion-icon></span></h2></div>
+        <div className="menubar">
+          {allMenuOpen && 
+          <ul className="menu">
+            {options.map((option) => (<li onClick={(e) => {setSelected(option)}}>{option}</li>))}
+          </ul>}
+        </div>
       </div>
-  
+      
       <div className="box-container">
         {filteredData.map(product => (
           <Card key={product.id} {...product} product={product}/>
         ))}
       </div>
+    </div>
+
   </div>
   )
 }

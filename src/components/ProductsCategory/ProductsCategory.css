@@ -1,182 +1,180 @@
 .wholepage .recommended {
-    position: relative;
-    top: 10px;
-    left: 100px;
+  position: relative;
+  top: 10px;
+  left: 100px;
 }
 
 .wholepage .recommended h3 {
-    font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
 }
 
 .wholepage .recommended .buttons {
-    font-family: "Playfair Display", serif;
-    position: relative;
-    top: 0;
-    left: 0;
-    border: 1px solid grey;
-    border-radius: 5px;
-    outline: none;
-    color: #111;
-    margin: 10px;
-    padding: 5px;
-    height: 30px;
-    width: 100px;
-    transition: 0.6s ease;
+  font-family: "Playfair Display", serif;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px solid grey;
+  border-radius: 5px;
+  outline: none;
+  color: #111;
+  margin: 10px;
+  padding: 5px;
+  height: 30px;
+  width: 100px;
+  transition: 0.6s ease;
 }
 
 .wholepage .recommended .buttons:hover {
-    background: #111;
-    color: #fff;
-    cursor: pointer;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
 }
 
 .wholepage hr {
-    position: relative;
-    top: 10px;
+  position: relative;
+  top: 10px;
 }
 
 .wholepage .box-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 50px;
-    left: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 80%;
-    padding-bottom: 150px;
-    margin: auto auto 150px auto;
+  position: relative;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 80%;
+  gap: 10px;
+  padding-bottom: 150px;
+  margin: auto auto 150px auto;
 }
 
 .wholepage .box-container .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid grey;
-    border-radius: 8px;
-    padding: 10px;
-    width: 180px;
-    max-width: 25%;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 10px;
+  width: 180px;
+  max-width: 25%;
+  overflow: hidden;
 }
 
 .wholepage .box-container .box img {
-    border-radius: 8px 8px 0 0;
-    width: 100%;
-    transform: scale(1);
-    transition: all linear 0.4s;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  transform: scale(1);
+  transition: all linear 0.4s;
 }
 
 .wholepage .box-container .box:hover img {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .wholepage .box-container .box .hover-icons {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-    left: 0;
-    font-size: 1.5rem;
-    gap: 5px;
-    z-index: -5;
-    transform: translateY(0);
-    transition: all 0.4s ease-in-out;
-    opacity: 0;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  font-size: 1.5rem;
+  gap: 5px;
+  z-index: -5;
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .wholepage .box-container .box:hover .hover-icons {
-    opacity: 1;
-    transform: translateY(-40px);
-    z-index: 5;
+  opacity: 1;
+  transform: translateY(-40px);
+  z-index: 5;
 }
 
 .wholepage .box-container .box .hover-icons button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    height: 40px;
-    width: 40px;
-    border: none;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px 10px;
-    overflow: hidden;
-    font-size: 1.3rem;
-    transition: 0.6s;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px 10px;
+  overflow: hidden;
+  font-size: 1.3rem;
+  transition: 0.6s;
+  cursor: pointer;
 }
 
 .wholepage .box-container .box .hover-icons button:hover {
-    color: #fff;
-    background-color: #111;
+  color: #fff;
+  background-color: #111;
 }
 
 .wholepage .box-container .box .product-title {
-    font-family: "Playfair Display", serif;
-    position: relative;
-    bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: "Playfair Display", serif;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wholepage .leftbar {
-    font-family: 'Playfair Display', serif;
-    position: absolute;
-    top: 180px;
-    left: 30px;
-    height: auto;
-    width: 130px;
+  font-family: "Playfair Display", serif;
+  position: absolute;
+  top: 180px;
+  left: 30px;
+  height: auto;
+  width: 130px;
 }
 
 .wholepage .leftbar .categorylist {
-    height: auto;
-    width: 130px;
-    margin-bottom: 5px;
+  height: auto;
+  width: 130px;
+  margin-bottom: 5px;
 }
 
 .wholepage .leftbar .categorylist ul {
-    position: relative;
-    top: 0;
-    left: 20px;
+  position: relative;
+  top: 0;
+  left: 20px;
 }
 
 .wholepage .leftbar .categorylist ul li {
-    margin: 5px;
-    cursor: pointer;
+  margin: 5px;
+  cursor: pointer;
 }
 
-@media (max-width:800px) {
-    .wholepage .recommended {
-        position: relative;
-        top: 10px;
-        left: 10px;
-    }
+@media (max-width: 575px) {
+  .wholepage .recommended {
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
 
-    .wholepage .box-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: 50px;
-        left: 0px;
-    }
+  .wholepage .box-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top: 40px;
+    left: 0px;
+  }
 
-    .wholepage .box-container .box {
-        max-width: 50%; 
-    }
+  .wholepage .box-container .box {
+    max-width: 50%;
+  }
 
-    .wholepage .leftbar {
-        display: none;
-    }
+  .wholepage .leftbar {
+    display: none;
+  }
 }
