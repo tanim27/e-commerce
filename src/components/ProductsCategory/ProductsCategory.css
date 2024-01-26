@@ -37,6 +37,12 @@
 
 .wholepage .box-container {
   position: relative;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   top: 50px;
   left: 0;
   display: flex;
@@ -154,7 +160,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 575px) {
   .wholepage .recommended {
     position: relative;
     top: 10px;
@@ -163,10 +169,10 @@
 
   .wholepage .box-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: relative;
-    top: 50px;
+    top: 40px;
     left: 0px;
   }
 
