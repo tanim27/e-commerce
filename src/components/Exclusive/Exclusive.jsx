@@ -5,7 +5,7 @@ function Exclusive() {
     return (
         <div>
             <section className="exclusive">
-                <div><h2>Exclusive</h2></div>
+                <h2>Exclusive</h2>
                 <div className="features">
                 <div className="left">
                     <div className="promotion about-box">
@@ -13,7 +13,7 @@ function Exclusive() {
                         <div className="description">
                             <h3>Promotions and Discounts</h3>
                             <p>Get 60% off on every spring collection product</p>
-                            <a href="">Shop Now<ion-icon name="arrow-forward-outline"></ion-icon></a>
+                            <button><span>Shop Now<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
                     </div>
                     <div className="trending about-box">
@@ -21,7 +21,7 @@ function Exclusive() {
                         <div className="description">
                             <h3>Trending Now</h3>
                             <p>Explore the trending world of our products</p>
-                            <a href="">Explore<ion-icon name="arrow-forward-outline"></ion-icon></a>
+                            <button><span>Explore<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ function Exclusive() {
                         <div className="description">
                             <h3>Customize Product</h3>
                             <p>You can customize your design from us.</p>
-                            <a href="">Let's Do<ion-icon name="arrow-forward-outline"></ion-icon></a>
+                            <button><span>Let's Do<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
                     </div>
                     <div className="blog about-box">
@@ -40,7 +40,7 @@ function Exclusive() {
                         <div className="description">
                             <h3>Blogs On Socials</h3>
                             <p>Explore the influencers on social media</p>
-                            <a href="">Explore<ion-icon name="arrow-forward-outline"></ion-icon></a>
+                            <button><span>Explore<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
                     </div>
                 </div>

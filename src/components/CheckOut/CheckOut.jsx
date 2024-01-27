@@ -59,11 +59,7 @@ function CheckOut() {
           <div className="major-right">
             <div className="order-summary">
               <h2 className="order-summary-title">Order Summary</h2>
-              {isEmpty ? (
-                <h4 className="warning">Your cart is empty :(</h4>
-              ) : (
-                ""
-              )}
+              {isEmpty ? (<h4 className="warning">Your cart is empty :(</h4>) : ("")}
               {items.map((slide) => (
                 <tr key={slide.id} className="item-detail">
                   <img src={slide.image} alt={slide.title} />

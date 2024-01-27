@@ -1,51 +1,44 @@
-h2 {
+.tips-section .tips-section-title {
     position: relative;
-    top: 60px;
+    top: 0;
     text-align: center;
     z-index: 10;
 }
 
-.single-tip {
+.tips-section .tips {
     position: relative;
-    top: 50px;
+    top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 60vh;
     width: 100%;
-    gap: 20px;
-    
 }
 
-.single-tip a {
-    display: inline-flex;
+.tips-section .tips .tips-button {
+    font-family: 'Playfair Display',serif;
+    font-size: 14px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Playfair Display',serif;
-    text-decoration: none;
-    font-size: 14px;
     height: 30px;
     width: 60px;
-    margin: 5px;
+    margin: 10px;
     padding: 15px 50px;
-    border: 1px solid #222;
-    transition: 0.6s;
+    background: none;
+    border: 1px solid silver;
+    cursor: pointer;
+    transition: all 0.6s;
 }
 
-.single-tip a:hover {
-    background-color: #222;
+.tips-section .tips .tips-button:hover {
+    border: 1px solid #111;
+    background-color: #111;
     color: #fff;
 }
 
-.single-tip h4 {
+.tips-section .tips h4 {
     font-family: 'Playfair Display',serif;
     font-weight: 500;
-}
-
-@media (max-width:600px) {
-    h2 {
-        position: relative;
-        top: 60px; 
-    }
 }

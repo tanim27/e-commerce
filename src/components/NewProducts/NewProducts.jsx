@@ -23,10 +23,9 @@ function NewProducts() {
   };
 
   return (
-    <>
+    <div>
+    <div className="wrapper">
       <h2 className="new-arrival-heading">New Arrivals</h2>
-
-      <div className="wrapper">
         <Swiper
           pagination={{
             dynamicBullets: true,
@@ -45,7 +44,7 @@ function NewProducts() {
           ))}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 }
 

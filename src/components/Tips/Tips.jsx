@@ -18,8 +18,9 @@ function Tips() {
   };
 
   return (
-    <>
-<h2>Tips and Tricks</h2>
+    <div>
+      <div className="tips-section">
+      <h2 className="tips-section-title">Tips and Tricks</h2>
 <Swiper
         scrollbar={{
           hide: false,
@@ -29,31 +30,30 @@ function Tips() {
         breakpoints={BreakPoint}
         className={"mySwiper"}
       >
-    <div className="tips">
         <SwiperSlide>
-            <div className="single-tip">
+            <div className="tips">
                 <img src="./assets/blog_01.jpg" alt=""/>
-                <a href="">Watch<span><ion-icon name="eye-outline"></ion-icon></span></a>
+                <button className="tips-button">Watch<span><ion-icon name="eye-outline"></ion-icon></span></button>
                 <h4>What is easier knitting or crocheting?</h4>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="single-tip">
+            <div className="tips">
                 <img src="./assets/blog_02.jpg" alt=""/>
-                <a href="">Watch<span><ion-icon name="eye-outline"></ion-icon></span></a>
+                <button className="tips-button">Watch<span><ion-icon name="eye-outline"></ion-icon></span></button>
                 <h4>Properly wear a hoodie</h4>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="single-tip">
+            <div className="tips">
                 <img src="./assets/blog_03.jpg" alt=""/>
-                <a href="">Watch<span><ion-icon name="eye-outline"></ion-icon></span></a>
+                <button className="tips-button">Watch<span><ion-icon name="eye-outline"></ion-icon></span></button>
                 <h4>What should i wear under a sweater?</h4>
             </div>
         </SwiperSlide>
-    </div>
 </Swiper>
-</>
+      </div>
+</div>
   )
 }
 

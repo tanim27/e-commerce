@@ -35,7 +35,7 @@ function Footer () {
                         <p>Enter your email below and connect to be the first to know about our new collection and product launches</p>
                         <form>
                             <input name="emails" placeholder="Enter your email address"/>
-                            <button><a href="">Connect</a></button>
+                            <button><span>Connect</span></button>
                         </form>
                     </div>
                 </div>
