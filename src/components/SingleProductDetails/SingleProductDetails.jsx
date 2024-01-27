@@ -52,7 +52,7 @@ function SingleProductDetails() {
             </div>
 
             <div className="third-line">
-              <p>Colors: {selectedColor}</p>
+              <p>Color: {selectedColor}</p>
               <ul>
                 {colors.map((color) => (
                 <button key={color} onClick={(e) => setSelectedColor(color)}>
