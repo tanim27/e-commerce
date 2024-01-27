@@ -1,19 +1,26 @@
 .single-product {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
     top: 100px;
     height: auto;
     width: 100%;
-    gap: 5px;
+    gap: 10px;
+    background: grey;
 }
 
 .single-product .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
 }
 
 .single-product .left img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 400px;
     width: 350px;
     border: 1px solid #111;
@@ -93,7 +100,7 @@
     width: 40px;
     padding: 5px;
     margin: 5px;
-    border: 1px solid #bbb;
+    border: none;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
@@ -129,7 +136,7 @@
 
 .single-product .right .sixth-line .left {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     height: 30px;
@@ -140,10 +147,14 @@
 }
 
 .single-product .right .sixth-line .left button, .single-product .right .sixth-line .left p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: none;
     border: none;
     outline: none;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .single-product .right .sixth-line .right {
@@ -165,6 +176,8 @@
 }
 
 .single-product .right .seventh-line {
+    position: relative;
+    top: 10px;
     height: 30px;
     width: 90%;
 }
@@ -183,10 +196,12 @@
 }
 
 .single-product .right .seventh-line button:hover {
-    opacity: 2;
+    
 }
 
 .single-product .right .last-line {
+    position: relative;
+    top: 10px;
     font-family: 'Playfair Display', serif;
     display: flex;
     justify-content: center;
@@ -247,14 +262,14 @@
 @media (max-width: 800px) {
     .single-product {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 
     .single-product .left {
-        width: 100%;
+        width: 90%;
     }
 
     .single-product .right {
-        width: 100%;
+        width: 90%;
     }
 }

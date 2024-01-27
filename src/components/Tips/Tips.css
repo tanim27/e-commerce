@@ -42,3 +42,16 @@
     font-family: 'Playfair Display',serif;
     font-weight: 500;
 }
+
+@media (max-width: 575px) {
+    .tips-section .tips {
+        position: relative;
+        top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        width: 100%;
+    }
+}

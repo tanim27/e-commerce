@@ -13,7 +13,7 @@
   align-items: flex-start;
   position: relative;
   top: 130px;
-  margin-bottom: 130px;
+  margin-bottom: 90px;
   padding: 20px;
   height: auto;
   width: 100vw;
@@ -150,8 +150,8 @@
 
 .checkout .major .major-right .order-summary .item-detail {
   position: relative;
-  top: 10px;
-  left: 20px;
+  top: 5px;
+  left: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

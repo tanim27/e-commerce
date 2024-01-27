@@ -16,7 +16,7 @@ footer .top-side {
     justify-content: center;
     align-items: flex-start;
     padding: 30px 80px;
-    gap: 50px;
+    gap: 100px;
 }
 
 /* Left Top Side */ 
@@ -25,7 +25,7 @@ footer .top-side .left {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 40px;
+    gap: 50px;
 }
 
 footer .top-side .left .left-top {
@@ -144,15 +144,15 @@ footer .bottom-side .icons li:hover {
    
     footer .top-side {
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
     }
 
     footer .top-side .left {
-        gap: 25px;
+        gap: 40px;
     }
 
     footer .top-side .left .left-top {
-        gap: 5px;
+        gap: 10px;
     }
 
     footer .top-side .right-top {
