@@ -1,7 +1,6 @@
 .product-showlist {
   position: relative;
   top: 0;
-  right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

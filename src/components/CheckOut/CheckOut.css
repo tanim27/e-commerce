@@ -8,13 +8,13 @@
 
 .checkout .major {
   font-family: "Playfair Display", serif;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   position: relative;
   top: 130px;
-  margin-bottom: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   padding: 20px;
+  margin-bottom: 90px;
   height: auto;
   width: 100vw;
   gap: 40px;
@@ -272,16 +272,19 @@
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 575px) {
   .checkout .major {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
   .checkout .major .major-left {
-    width: 95%;
+    width: 90%;
   }
 
   .checkout .major .major-right {
-    width: 95%;
+    width: 90%;
   }
 }
