@@ -1,7 +1,7 @@
 .wholepage .recommended {
   position: relative;
   top: 10px;
-  left: 100px;
+  left: 180px;
 }
 
 .wholepage .recommended h3 {
@@ -13,7 +13,7 @@
   position: relative;
   top: 0;
   left: 0;
-  border: 1px solid grey;
+  border: 1px solid silver;
   border-radius: 5px;
   outline: none;
   color: #111;
@@ -25,6 +25,7 @@
 }
 
 .wholepage .recommended .buttons:hover {
+  border: 1px solid #111;
   background: #111;
   color: #fff;
   cursor: pointer;
@@ -33,27 +34,26 @@
 .wholepage hr {
   position: relative;
   top: 10px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  opacity: 0.3;
 }
 
 .wholepage .box-container {
   position: relative;
   top: 40px;
-  left: 40px;
+  left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  top: 50px;
-  left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   height: 100%;
-  width: 80%;
+  width: 90%;
   gap: 10px;
-  padding-bottom: 150px;
-  margin: auto auto 150px auto;
+  margin: auto auto 150px 180px;
 }
 
 .wholepage .box-container .box {
@@ -61,11 +61,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid grey;
+  border: 1px solid silver;
   border-radius: 8px;
   padding: 10px;
   width: 180px;
-  max-width: 25%;
+  max-width: 45%;
   overflow: hidden;
 }
 
@@ -137,10 +137,13 @@
 .wholepage .leftbar {
   font-family: "Playfair Display", serif;
   position: absolute;
-  top: 180px;
+  top: 160px;
   left: 30px;
   height: auto;
   width: 130px;
+  padding-bottom: 20px;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
 }
 
 .wholepage .leftbar .categorylist {
@@ -160,24 +163,30 @@
   cursor: pointer;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 700px) {
   .wholepage .recommended {
     position: relative;
     top: 10px;
-    left: 10px;
+    left: 15px;
+  }
+
+  .wholepage hr {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 90%;
   }
 
   .wholepage .box-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
-    position: relative;
-    top: 40px;
-    left: 0px;
+    width: 90%;
+    margin: auto auto 100px auto;
   }
-
+  
   .wholepage .box-container .box {
-    max-width: 50%;
+    max-width: 45%;
   }
 
   .wholepage .leftbar {

@@ -12,8 +12,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
-  top: 150px;
-  margin: 0 10px;
+  top: 130px;
+  margin-bottom: 130px;
   padding: 20px;
   height: auto;
   width: 100vw;
@@ -136,24 +136,28 @@
 .checkout .major .major-right .order-summary .order-summary-title {
   position: relative;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkout .major .major-right .order-summary .warning {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 100px;
 }
 
 .checkout .major .major-right .order-summary .item-detail {
   position: relative;
-  top: 0;
+  top: 10px;
+  left: 20px;
   display: flex;
   justify-content: flex-start;
-  left: 50px;
-  height: 150px;
+  align-items: flex-start;
+  height: auto;
   width: 100%;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .checkout .major .major-right .order-summary .item-detail img {
@@ -198,13 +202,13 @@
 
 .checkout .major .major-right .payment-summary .bill-info {
   position: relative;
-  top: 10px;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 60%;
-  margin: 40px 0;
+  margin: 30px 0;
   gap: 5px;
 }
 

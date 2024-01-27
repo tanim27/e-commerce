@@ -7,15 +7,17 @@
   align-items: center;
   height: auto;
   width: 100vw;
+  margin: 25px 0;
 }
 
 .product-showlist .title {
   position: relative;
-  top: 0;
+  top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: auto;
   width: 100vw;
 }
 
@@ -39,12 +41,13 @@
 
 .product-showlist .title .menubar {
   position: relative;
-  top: 70px;
+  top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 115px;
   width: 180px;
+  
 }
 
 .product-showlist .title .menubar ul {
@@ -78,7 +81,7 @@
 
 .product-showlist .box-container {
   position: relative;
-  top: 20px;
+  top: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -94,12 +97,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid grey;
+  border: 1px solid silver;
   border-radius: 8px;
   padding: 10px;
+  width: 236px;
   max-width: 50%;
   overflow: hidden;
-  width: 236px;
 }
 
 .product-showlist .box-container .box img {
@@ -122,17 +125,16 @@
   left: 0;
   font-size: 1.5rem;
   gap: 5px;
-  z-index: -5;
   transform: translateY(0);
   transition: all 0.4s ease-in-out;
   opacity: 0;
+  z-index: 5;
   overflow: hidden;
 }
 
 .product-showlist .box-container .box:hover .hover-icons {
   opacity: 1;
   transform: translateY(-40px);
-  z-index: 5;
 }
 
 .product-showlist .box-container .box .hover-icons button {

@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 3.5rem;
-    right: 5.3rem;
+    top: 3.4rem;
+    right: 5.1rem;
+    height: auto;
     width: 12rem;
-    padding: 16px;
+    padding: 1rem;
     background-color: #fff;
-    border: 1px solid #111;
+    border: 1px solid transparent;
     border-radius: 10px;
     box-shadow: 1px 1px 10px 6px rgba(0, 0, 0, 0.6);
     font-family: "Playfair Display", serif;
@@ -18,15 +19,15 @@
 .dropdown::before{
     content: '';
     position: absolute;
-    top: -0.7rem;
+    top: -0.6rem;
     right: 1.3rem;
     width: 5px;
     height: 5px;
     transform: rotate(45deg);
     padding: 7px;
     background-color: #fff;
-    border-top: 1px solid #111;
-    border-left: 1px solid #111;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
     z-index: 100;
 }
 
@@ -44,7 +45,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #111;
     border-radius: 8px;
     width: 100%;
     padding: 5px 30px;
@@ -53,24 +53,27 @@
 .dropdown ul .login {
     background-color: #111;
     color: #fff;
-    transition: 0.6s;
+    border: 1px solid #111;
+    transition: all 0.6s ease;
 }
 
 .dropdown ul .login:hover {
     background-color: #fff;
     color: #111;
+    border: 1px solid silver;
 }
 
 .dropdown ul .signup {
     background-color: #fff;
     color: #111;
-    transition: 0.6s;
+    border: 1px solid silver;
+    transition: all 0.6s ease;
 }
 
 .dropdown ul .signup:hover {
     background-color: #111;
     color: #fff;
-   
+    border: 1px solid #111;
 }
 
 @media (max-width:900px) {
@@ -78,7 +81,9 @@
         display: block;
         flex-direction: column;
         position: absolute;
-        top: 3.5rem;
-        right: 1.9rem;
+        top: 3.4rem;
+        right: 3.2rem;
+        height: auto;
+        width: 10rem;
     }
 }

@@ -1,4 +1,16 @@
+.top-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.top-banner .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .top-banner .banner .top-img {
     width: 100%;
@@ -11,18 +23,18 @@
     align-items: center;
     position: relative;
     top: 0;
-    height: 150px;
+    height: 130px;
     transform: translateY(-110%);
 }
 
 .top-banner .banner .moto div li {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.1rem;
-    font-weight: 600;
 }
 
 .top-banner .banner .moto p {
@@ -43,13 +55,13 @@
     color: #fff;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
     .top-banner {
         background-color: #eeee;
     }
 
     .top-banner .banner .moto {
-        
+        height: 80px;
         transform: translateY(-65%);
     }
 

@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   
   .container-login {
     display: flex;
@@ -11,6 +7,7 @@
   }
   
   .container-login .log-in {
+    font-family: "Playfair Display", serif;
     position: relative;
     top: 50px;
     display: flex;
@@ -19,11 +16,10 @@
     align-items: center;
     padding: 30px 40px;
     border-radius: 10px;
-    outline: 1px solid #111;
+    outline: 1px solid grey;
     height: 100%;
-    font-family: "Playfair Display", serif;
-    overflow: hidden;
     z-index: 1100;
+    overflow: hidden;
     background-color: #fff;
   }
   
@@ -56,7 +52,7 @@
     height: 40px;
     width: 40px;
     margin: 0 5px;
-    border: 1px solid #111;
+    border: 1px solid silver;
     border-radius: 20%;
     font-size: 18px;
     transition: all 0.6s ease;
@@ -65,12 +61,14 @@
   .container-login .log-in .social-icons a:hover {
     background-color: #111;
     color: #fff;
+    border: 1px solid #111;
   }
   
   .container-login .log-in span {
     font-size: 14px;
     text-transform: lowercase;
     text-align: center;
+    opacity: 0.9;
   }
   
   .container-login .log-in input {
@@ -89,7 +87,6 @@
   }
   
   .container-login .log-in button {
-    background-color: #111;
     font-family: "Playfair Display SC", serif;
     font-size: 12px;
     font-weight: 600;
@@ -101,6 +98,7 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.6s;
+    background-color: #111;
   }
   
   .container-login .log-in button:hover {

@@ -20,7 +20,6 @@ function CartProducts() {
       <div className="totalpage">
         <h2 className="cartpage-title">Cart</h2>
         <h4 className="item-amount">
-          {" "}
           Unique Total: ({totalUniqueItems}) Total items: ({totalItems})
         </h4>
         <hr className="line1" />
