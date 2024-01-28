@@ -41,7 +41,6 @@ header {
 }
 
 .menu-icon {
-  font-size: 1.6rem;
   display: none;
 }
 
@@ -241,13 +240,13 @@ header {
   .menu-icon {
     display: block;
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
     font-size: 1.6rem;
     cursor: pointer;
-    padding: 2px 5px;
-    margin: 2px;
-    border-radius: 8px;
   }
 
   /* Center */
