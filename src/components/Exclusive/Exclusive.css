@@ -165,7 +165,7 @@
 @media  (max-width:575px) {
     .exclusive .features {
         flex-wrap: wrap;
-        right: 20px;
+        right: 15px;
     }
 
     .exclusive .features .left,
