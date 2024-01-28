@@ -242,13 +242,12 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 15px;
-    height: 30px;
-    width: 30px;
-    
+    height: 20px;
+    width: 25px;
     font-size: 1.8rem;
-    background: grey;
+    background-color: #eeee;
     cursor: pointer;
   }
 
