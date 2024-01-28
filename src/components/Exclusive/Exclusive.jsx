@@ -13,7 +13,7 @@ function Exclusive() {
                         <div className="description">
                             <h3>Promotions and Discounts</h3>
                             <p>Get 60% off on every spring collection product</p>
-                            <button><span>Shop Now<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
+                            <button><span>Grab It<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
                     </div>
                     <div className="trending about-box">
