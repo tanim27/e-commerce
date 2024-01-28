@@ -185,7 +185,7 @@
   display: none;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .wholepage .recommended {
     position: relative;
     top: 10px;
