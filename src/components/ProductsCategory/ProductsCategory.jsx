@@ -55,7 +55,7 @@ function ProductsCategory() {
         </div>
         
         <div className={`leftbar ${isLeftBarActive ? "leftbar-active" : ""}`}>
-          <button className="leftbar-close-icon" onClick={toggleLeftBar}><ion-icon name="close"></ion-icon></button>
+          <div className="leftbar-close-icon" onClick={toggleLeftBar}><ion-icon name="close"></ion-icon></div>
           <div className="filter">
             <h3>Filter</h3>
             <div className="categorylist">

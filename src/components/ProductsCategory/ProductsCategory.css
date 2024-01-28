@@ -235,13 +235,16 @@
   }
 
   .wholepage .leftbar .leftbar-close-icon {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 8px;
-    border: none;
-    outline: none;
-    font-size: 1.6rem;
+    height: 30px;
+    width: 30px;
+    font-size: 2rem;
+    background-color: #eeee;
     cursor: pointer;
   }
 
