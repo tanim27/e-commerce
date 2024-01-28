@@ -205,7 +205,7 @@
     align-items: flex-start;
     width: 90%;
     margin: auto auto 100px auto;
-    gap: 20px;
+    gap: 30px;
   }
   
   .wholepage .box-container .box {
@@ -222,11 +222,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     height: 100vh;
-    width: 40%;
+    width: 60%;
     border: none;
     background: #eeee;
     z-index: 100;
     transition: all 0.5s ease;
+    overflow: hidden;
   }
 
   .wholepage .leftbar.leftbar-active {
@@ -238,7 +239,6 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    background: none;
     border: none;
     outline: none;
     font-size: 1.6rem;
@@ -248,11 +248,11 @@
   .wholepage .leftbar .filter {
     position: relative;
     top: 50px;
-    left: 10px;
+    left: 40px;
   }
 
   .wholepage .filter-button {
-    position: absolute;
+    position: fixed;
     top: 300px;
     display: flex;
     justify-content: center;
