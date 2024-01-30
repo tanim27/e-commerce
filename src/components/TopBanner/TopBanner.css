@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .top-banner .banner {
@@ -10,10 +11,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .top-banner .banner .top-img {
-    width: 100%;
+    width: 100vw;
 }
 
 .top-banner .banner .moto {

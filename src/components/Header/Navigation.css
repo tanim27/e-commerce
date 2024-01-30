@@ -261,11 +261,12 @@ header {
     top: 0;
     left: -100%;
     bottom: 0;
-    height: 100vh;
+    height: 100%;
     width: 40%;
     background: #eeee;
     z-index: 100;
     transition: all 0.5s ease;
+    overflow: hidden;
   }
 
   .navbar.navbar-active {
@@ -349,84 +350,105 @@ header {
 /* searcbar css */
 
 .searchbar {
-  position: fixed;
-  top: 0;
-  height: 50px;
-  width: 100vw;
-  background: #fff;
-  z-index: 200;
-}
-
-.searchbar .searchbox {
-  display: flex;
-  position: relative;
-  top: 0;
-  left: 5px;
-  height: 50px;
-  width: 93%;
-  font-size: 0.7rem;
-}
-
-.searchbar .searchbox form {
-  position: relative;
-  top: 10px;
-  left: 5px;
-  display: flex;
-  height: 50px;
-  width: 100%;
-  gap: 10px;
-}
-
-.searchbar .searchbox form .searchbox-icons {
-  position: relative;
-  top: 5px;
-  left: 0;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.searchbar .searchbox form .searchbox-icons:hover {
-  color: grey;
-}
-
-.searchbar .searchbox form input {
-  font-family: "Playfair Display", serif;
-  font-size: 0.8rem;
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.searchbar .product-description {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  height: 90px;
-  width: 100%;
-  border-bottom: 1px solid silver;
-  background: #dddd;
-}
-
-.searchbar .product-description img {
-  position: relative;
-  top: 5px;
-  left: 20px;
-  height: 80px;
-  width: 80px;
-}
-
-.searchbar .product-description .detail {
-  position: relative;
-  top: 10px;
-  left: 30px;
-}
-
-.searchbar .product-description .detail p {
-  font-family: "Playfair display", serif;
-}
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: #eeee;
+    z-index: 200;
+  }
+  
+  .searchbar .searchbox {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #eeee;
+    font-size: 0.7rem;
+  }
+  
+  .searchbar .searchbox form {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .searchbar .searchbox form .searchbox-icons {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .searchbar .searchbox form .searchbox-icons:hover {
+    color: grey;
+  }
+  
+  .searchbar .searchbox form input {
+    font-family: "Playfair Display", serif;
+    font-size: 0.8rem;
+    position: relative;
+    top: 0;
+    left: 10px;
+    height: 30px;
+    width: 90%;
+    border: none;
+    outline: none;
+    background: none;
+  }
+  
+  .searchbar .product-description {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px solid silver;
+    background: #dddd;
+  }
+  
+  .searchbar .product-description img {
+    position: relative;
+    top: 5px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+  }
+  
+  .searchbar .product-description .detail {
+    position: relative;
+    top: 10px;
+    left: 30px;
+  }
+  
+  .searchbar .product-description .detail p {
+    font-family: "Playfair display", serif;
+  }
+  
+  
+  @media (max-width:700px) {
+    .searchbar .searchbox form .searchbox-icons {
+      left: 5px;
+    }
+  
+    .searchbar .searchbox form input {
+      font-family: "Playfair Display", serif;
+      font-size: 0.8rem;
+      position: relative;
+      top: 0;
+      left: 5px;
+      height: 30px;
+      width: 80%;
+      border: none;
+      outline: none;
+      background: none;
+    }
+  }
