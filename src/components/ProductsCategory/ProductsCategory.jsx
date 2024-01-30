@@ -16,6 +16,12 @@ function ProductsCategory() {
   const [selectedSize, setSelectedSize] = useState("All")
   const [selectedColor, setSelectedColor] = useState("All");
 
+  const [isLeftBarActive, setIsLeftBarActive] = useState()
+
+  const toggleLeftBar = () => {
+    setIsLeftBarActive(!isLeftBarActive)
+  }
+
   const filteredData = AllProductsData.filter(
     (x) =>
       (selected === "All Products" || x.category === selected.toLowerCase()) &&
@@ -48,50 +54,52 @@ function ProductsCategory() {
           ))}
         </div>
         
-        <div className="leftbar">
-          <div className="categorylist">
-            <h3>Category</h3>
-            <ul>
-              {gendercategories.map((gender) => (
-                <li key={gender} onClick={(e) => setSelectedGender(gender)}>
-                  {gender}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className={`leftbar ${isLeftBarActive ? "leftbar-active" : ""}`}>
+          <div className="leftbar-close-icon" onClick={toggleLeftBar}><ion-icon name="close"></ion-icon></div>
+          <div className="filter">
+            <h3>Filter</h3>
+            <div className="categorylist">
+              <h4>Category</h4>
+              <ul>
+                {gendercategories.map((gender) => (
+                <li key={gender} onClick={(e) => setSelectedGender(gender)}>{gender}</li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="categorylist">
-            <h3>Price</h3>
-            <ul>
-            {
-              prices.map((price)=>(
+            <div className="categorylist">
+              <h4>Price</h4>
+              <ul>
+                {prices.map((price)=>(
                 <li key={price} onClick={(e) => setSelectedPrice(price)}>{price}</li>
-            ))}
-            </ul>
-          </div>
+                ))}
+              </ul>
+            </div>
 
-          <div className="categorylist">
-            <h3>Size</h3>
-            <ul>
-            {
-              sizes.map((size)=>(
+            <div className="categorylist">
+              <h4>Size</h4>
+              <ul>
+                {sizes.map((size)=>(
                 <li key={size} onClick={(e) => setSelectedSize(size)}>{size}</li>
-            ))}
-            </ul>
+                ))}
+              </ul>
+            </div>
+
+            <div className="categorylist">
+              <h4>Color</h4>
+              <ul>
+                {colors.map((color) => (
+                <li key={color} onClick={(e) => setSelectedColor(color)}>{color}</li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="categorylist">
-            <h3>Color</h3>
-            <ul>
-              {colors.map((color) => (
-                <li key={color} onClick={(e) => setSelectedColor(color)}>
-                  {color}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
+
+        <div className="filter-button" onClick={toggleLeftBar}><ion-icon name="funnel-outline"></ion-icon></div>
       </div>
+      
     </div>
   )
 }

@@ -28,6 +28,7 @@ function Footer () {
                         <li>+9912991199</li>
                         <li>blaa@domain.com</li>
                     </div>
+                    
                     </div>
                     
                     <div className="right-top">

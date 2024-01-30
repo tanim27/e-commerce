@@ -26,13 +26,15 @@
 }
 
 .single-product .right {
-    display: flex;
-    flex-direction: column;
     position: relative;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     height: auto;
     width: 50%;
-    
+    gap: 10px;
 }
 
 .single-product .right h1 {
@@ -53,7 +55,6 @@
     display: flex;
     height: 50px;
     width: 100px;
-   
 }
 
 .single-product .right .second-line .leftside h3 {
@@ -65,7 +66,6 @@
     font-family: "Playfair Display", serif;
     height: auto;
     width: 90%;
-  
 }
 
 .single-product .right .third-line ul button {
@@ -90,7 +90,6 @@
     font-family: "Playfair Display", serif;
     height: auto;
     width: 90%;
-    
 }
 
 .single-product .right .fourth-line ul button {
@@ -119,7 +118,6 @@
     height: 30px;
     width: 90%;
     gap: 10px;
-    
 }
 
 .single-product .right .sixth-line {
@@ -129,8 +127,7 @@
     align-items: center;
     height: 30px;
     width: 90%;
-    gap: 10px;
-    
+    gap: 10px; 
 }
 
 .single-product .right .sixth-line .left {
@@ -152,7 +149,7 @@
     background: none;
     border: none;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
 }
 
@@ -172,20 +169,22 @@
 .single-product .right .sixth-line .right:hover {
     background: #111;
     color: #fff;
+    border: 1px solid #111;
 }
 
 .single-product .right .seventh-line {
     position: relative;
-    top: 10px;
+    top: 0;
     height: 30px;
     width: 90%;
 }
 
 .single-product .right .seventh-line button {
     font-family: 'Playfair Display', serif;
+    font-size: 1rem;
     height: 30px;
     width: 100%;
-    border: 1px solid #111;
+    border: none;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
@@ -199,17 +198,15 @@
 }
 
 .single-product .right .last-line {
-    position: relative;
-    top: 10px;
     font-family: 'Playfair Display', serif;
+    position: relative;
+    top: 0; 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 40px;
     max-width: 90%;
     width: 90%;
-    margin: 5px;
-    gap: 20px;
 }
 
 .single-product .right .last-line p {
@@ -217,8 +214,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px;
-    gap: 3px;
     cursor: pointer;
 }
 
@@ -229,14 +224,17 @@
 .single-product .right .delivery-description {
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
+    position: relative;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     height: 40px;
     width: 90%;
-    margin: 15px 5px;
-    gap: 5px;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    gap: 10px;
 }
 
 .single-product .right .delivery-description p {
@@ -269,6 +267,12 @@
     }
 
     .single-product .right {
-        width: 90%;
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 40px;
     }
 }

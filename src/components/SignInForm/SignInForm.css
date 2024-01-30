@@ -12,10 +12,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 40px;
-    border-radius: 10px;
-    outline: 1px solid grey;
     height: 100%;
+    padding: 30px 40px;
+    border: 1px solid silver;
+    border-radius: 10px;
     overflow: hidden;
     z-index: 1100;
     background-color: #fff;

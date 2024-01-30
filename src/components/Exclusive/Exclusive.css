@@ -165,20 +165,26 @@
 @media  (max-width:575px) {
     .exclusive .features {
         flex-wrap: wrap;
+        right: 15px;
     }
 
     .exclusive .features .left,
      .exclusive .features .left .promotion,
       .exclusive .features .right,
        .exclusive .features .right .blog {
-        width: 100%;
+        width: 110%;
     }
 
     .exclusive .features .left .promotion,
      .exclusive .features .left .promotion img,
       .exclusive .features .right .blog, 
-       .exclusive .features .right .blog img {
+       .exclusive .features .right .blog img,
+        .exclusive .features .left .trending,
+         .exclusive .features .left .trending img, 
+          .exclusive .features .right .custom,
+           .exclusive .features .right .custom img  {
         height: 50vh;
+        width: 110%;
     }
 
     .exclusive .features .left .description, .exclusive .features .right .description {
