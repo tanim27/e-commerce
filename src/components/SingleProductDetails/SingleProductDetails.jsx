@@ -16,7 +16,7 @@ function SingleProductDetails() {
     const sizes = ["s", "m", "l", "xl", "xxl"]
     
     useEffect(()=> {
-        const product = AllProductsData.find(x => x.id === id)
+        const product = AllProductsData.find(x => x.id === parseInt(id))
 
         setProduct(product)
     },[id])
@@ -30,7 +30,7 @@ function SingleProductDetails() {
         <div className="single-product">
         
           <div className="left">
-            <img src={product.image} alt={product.title} />
+            <img src={process.cwd() + product.image} alt={product.title} />
           </div>
           
           <div className="right">
