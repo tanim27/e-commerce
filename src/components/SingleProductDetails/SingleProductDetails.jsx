@@ -30,7 +30,7 @@ function SingleProductDetails() {
         <div className="single-product">
         
           <div className="left">
-            <img src={process.cwd() + product.image} alt={product.title} />
+            <img src={product.image} alt={product.title} />
           </div>
           
           <div className="right">
