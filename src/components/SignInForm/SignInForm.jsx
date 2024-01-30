@@ -11,8 +11,8 @@ isOpen={visible}
 onRequestClose={close}
 style={{
     content: {
-        height: "470px",
-        width: "390px",
+        height: "500px",
+        width: "400px",
         top: '50%',
         left: '50%',
         right: 'auto',
