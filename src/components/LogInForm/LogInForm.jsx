@@ -10,13 +10,13 @@ function LogInForm({ visible, close }) {
         onRequestClose={close}
         style={{
           content: {
-            height: "500px",
+            height: "440px",
             width: "400px",
             top: "50%",
             left: "50%",
             right: "auto",
             bottom: "auto",
-            marginRight: "-50%",
+            marginRight: "50%",
             borderRadius: "10px",
             zIndex: "1100",
             transform: "translate(-50%, -50%)",
