@@ -10,7 +10,7 @@ function LogInForm({ visible, close }) {
         onRequestClose={close}
         style={{
           content: {
-            height: "500px",
+            height: "480px",
             width: "400px",
             top: "50%",
             left: "50%",
