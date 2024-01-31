@@ -1,7 +1,17 @@
+.wholepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
 .wholepage .recommended {
   position: relative;
   top: 10px;
   left: 180px;
+  width: 100%;
 }
 
 .wholepage .recommended h3 {
@@ -13,6 +23,9 @@
   position: relative;
   top: 0;
   left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid silver;
   border-radius: 5px;
   outline: none;
@@ -156,27 +169,29 @@
 .wholepage .leftbar .filter {
   position: relative;
   top: 0;
-  left: 10px;
+  left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  height: 100%;
+  width: 100%;
   gap: 10px;
 }
 
-.wholepage .leftbar  .categorylist {
+.wholepage .leftbar .filter .categorylist {
   height: auto;
-  width: 130px;
+  width: 110px;
   margin-bottom: 5px;
 }
 
-.wholepage .leftbar .categorylist ul {
+.wholepage .leftbar .filter .categorylist ul {
   position: relative;
   top: 0;
   left: 20px;
 }
 
-.wholepage .leftbar .categorylist ul li {
+.wholepage .leftbar .filter .categorylist ul li {
   margin: 5px;
   cursor: pointer;
 }
@@ -221,7 +236,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 100vh;
+    height: 100%;
     width: 50%;
     border: none;
     background: #eeee;

@@ -1,3 +1,12 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
 .checkout .checkoutpage-title {
   display: flex;
   justify-content: center;
@@ -13,10 +22,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
-  margin-bottom: 90px;
-  height: auto;
-  width: 100vw;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
+  height: 100%;
+  width: 100%;
   gap: 40px;
 }
 
@@ -272,12 +282,13 @@
   cursor: pointer;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 650px) {
   .checkout .major {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    padding-left: 0;
   }
 
   .checkout .major .major-left {

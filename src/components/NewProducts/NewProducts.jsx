@@ -20,6 +20,9 @@ function NewProducts() {
     900: {
       slidesPerView: 3,
     },
+    1000: {
+      slidesPerView: 4,
+    },
   };
 
   return (
@@ -31,7 +34,7 @@ function NewProducts() {
             dynamicBullets: true,
           }}
           modules={[Pagination]}
-          spaceBetween={20}
+          spaceBetween={0}
           breakpoints={BreakPoint}
           className="mySwiper"
         >

@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 50px;
+    padding: 50px 30px;
     gap: 10px;
 }
 
@@ -165,14 +165,13 @@
 @media  (max-width:575px) {
     .exclusive .features {
         flex-wrap: wrap;
-        right: 15px;
     }
 
     .exclusive .features .left,
      .exclusive .features .left .promotion,
       .exclusive .features .right,
        .exclusive .features .right .blog {
-        width: 110%;
+        width: 100%;
     }
 
     .exclusive .features .left .promotion,
@@ -184,7 +183,7 @@
           .exclusive .features .right .custom,
            .exclusive .features .right .custom img  {
         height: 50vh;
-        width: 110%;
+        width: 100%;
     }
 
     .exclusive .features .left .description, .exclusive .features .right .description {

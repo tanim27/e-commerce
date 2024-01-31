@@ -7,7 +7,7 @@ footer {
     position: relative;
     top: 20px;
     height: auto;
-    width: 100vw;
+    width: 100%;
     background-color: #eeee;
 }
 
@@ -96,7 +96,7 @@ footer .top-side .right-top form button {
     background-color: #111;
     color: #fff;
     cursor: pointer;
-    transition: 0.6s;
+    transition: 0.6s all;
 }
 
 footer .top-side .right-top form button:hover {

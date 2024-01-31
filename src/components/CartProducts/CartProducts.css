@@ -1,3 +1,7 @@
+.totalpage {
+  width: 100%;
+}
+
 .totalpage .cartpage-title {
   display: flex;
   justify-content: center;
@@ -18,7 +22,7 @@
   position: relative;
   top: 150px;
   left: 0;
-  width: 100vw;
+  width: 100%;
   opacity: 0.3;
 }
 
@@ -26,7 +30,7 @@
   position: relative;
   top: 200px;
   left: 0;
-  width: 100vw;
+  width: 100%;
   opacity: 0.3;
 }
 
@@ -34,7 +38,7 @@
   position: relative;
   top: 150px;
   left: 0;
-  width: 100vw;
+  width: 100%;
   opacity: 0.3;
 }
 
@@ -43,7 +47,7 @@
   top: 145px;
   left: 0;
   height: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 .totalpage .productdetail .static {
@@ -51,7 +55,7 @@
   top: 0;
   left: 0;
   height: 50px;
-  width: 50px;
+  width: 100%;
   border: 1px solid #111;
   padding: 20px;
 }
@@ -72,10 +76,9 @@
   position: relative;
   top: 0;
   left: 0;
-  height: 150px;
-  width: 150px;
   text-align: center;
-  padding: 10px;
+  height: 150px;
+  width: 100%;
   margin: 50px;
 }
 
