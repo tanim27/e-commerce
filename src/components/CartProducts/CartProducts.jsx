@@ -30,7 +30,7 @@ function CartProducts() {
             <th>Price</th>
             <th>Qty</th>
             <th>Total</th>
-            
+            <th></th>
           </tr>
 
           {isEmpty ? <h3 className="warning"> Your cart is empty :( </h3> : ""}
