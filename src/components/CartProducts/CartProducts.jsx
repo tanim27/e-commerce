@@ -70,7 +70,11 @@ function CartProducts() {
                 </div>
               </td>
               <td>${slide.price * slide.quantity}</td>
-              
+              <td onClick={() => removeItem(slide.id)}>
+                <div className="remove-product">
+                  <ion-icon name="bag-remove-outline"></ion-icon>
+                </div>
+              </td>
             </tr>
           ))}
         </table>
