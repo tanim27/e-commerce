@@ -30,7 +30,7 @@ function CartProducts() {
             <th>Price</th>
             <th>Qty</th>
             <th>Total</th>
-            <th>Remove</th>
+            
           </tr>
 
           {isEmpty ? <h3 className="warning"> Your cart is empty :( </h3> : ""}
@@ -70,11 +70,7 @@ function CartProducts() {
                 </div>
               </td>
               <td>${slide.price * slide.quantity}</td>
-              <td onClick={() => removeItem(slide.id)}>
-                <div className="remove-product">
-                  <ion-icon name="bag-remove-outline"></ion-icon>
-                </div>
-              </td>
+              
             </tr>
           ))}
         </table>
