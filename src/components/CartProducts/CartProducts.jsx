@@ -1,105 +1,74 @@
-import React from "react";
-import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react"
+import { Link } from 'react-router-dom'
+import { CartContext } from './../../LocalStorage/CartContext'
 import "./CartProducts.css";
 
 function CartProducts() {
-  const {
-    isEmpty,
-    totalUniqueItems,
-    totalItems,
-    items,
-    cartTotal,
-    updateItemQuantity,
-    removeItem,
-    emptyCart,
-  } = useCart();
+  const { AllProductsData, cartItems, addItem, removeItem, totalAmount } = useContext(CartContext)
 
   return (
-    <div>
-      <div className="totalpage">
-        <h2 className="cartpage-title">Cart</h2>
-        <h4 className="item-amount">
-          Unique Total: ({totalUniqueItems}) Total items: ({totalItems})
-        </h4>
-        <hr className="line1" />
-        <hr className="line2" />
-        <table className="productdetail">
-          <tr className="static">
-            <th>Product</th>
-            <th>Price</th>
-            <th>Qty</th>
-            <th>Total</th>
-            <th></th>
-          </tr>
+  <div>
+    <div className="cartitems">
+      <hr/>
+      <div className="cartitems-format-main">
 
-          {isEmpty ? <h3 className="warning"> Your cart is empty :( </h3> : ""}
+        <div className="product">
+          <h4>Products</h4>
+          <h4>Description</h4>
+        </div>
+        <h4>Price</h4>
+        <div className="responsive-lines">
+          <h4>Quantity</h4>
+          <h4>Total</h4>
+          <h4>Remove</h4>
+        </div>
 
-          {items.map((slide) => (
-            <tr className="dynamic" key={slide.id}>
-              <td>
-                <div className="product-desc">
-                  <img src={slide.image} alt={slide.title} />
-                  <div className="text-desc">
-                    <h4>{slide.title}</h4>
-                    <p>Color:{slide.color}</p>
-                    <p>Size: {slide.size}</p>
+      </div>
+      <hr />
+      {AllProductsData.map((product) => {
+        if (cartItems[product.id] > 0) {
+          return (
+            <div>
+              <div className="cartitems-format cartitems-format-main" key={product.id}>
+                <div className="product">
+                  <img src={product.image} alt={product.title} />
+                  <div className="product-description">
+                    <h5>{product.title}</h5>
+                    <p>Size: M</p>
+                    <p>Color: Yellow</p>
                   </div>
                 </div>
-              </td>
-              <td>
-                <p>${slide.price}</p>
-              </td>
-              <td className="counter">
-                <div className="inner">
-                  <button
-                    onClick={() =>
-                      updateItemQuantity(slide.id, slide.quantity - 1)
-                    }
-                  >
-                    -
-                  </button>
-                  <p>{slide.quantity}</p>
-                  <button
-                    onClick={() =>
-                      updateItemQuantity(slide.id, slide.quantity + 1)
-                    }
-                  >
-                    +
-                  </button>
-                </div>
-              </td>
-              <td>${slide.price * slide.quantity}</td>
-              <td onClick={() => removeItem(slide.id)}>
-                <div className="remove-product">
-                  <ion-icon name="bag-remove-outline"></ion-icon>
-                </div>
-              </td>
-            </tr>
-          ))}
-        </table>
-        <hr className="line3" />
 
-        <div className="final-list1">
-          <p className="total-amount">Subtotal: ${cartTotal}</p>
-          <button className="remove-button" onClick={() => emptyCart()}>
-            Remove all
-          </button>
-        </div>
+                <p className="single-price">${product.price}</p>
 
-        <div className="final-list2">
-          <div>
-            <input type="radio"></input>I agree to terms and conditions
-          </div>
-          <Link to="/billing">
-            <button type="submit" className="checkout-button">
-              Check Out
-            </button>
-          </Link>
-        </div>
-      </div>
+                <div className="responsive-lines">
+                  <div className="cartitems-counter">
+                    <button onClick={() => removeItem(product.id)}>-</button>
+                    <button>{cartItems[product.id]}</button>
+                    <button onClick={() => addItem(product.id)}>+</button>
+                  </div>
+                  <p>${product.price * cartItems[product.id]}</p>
+                  <p className="cartitems-remove-icon"><ion-icon name="close" onClick={() => removeItem(product.id)}></ion-icon></p>
+                </div>
+              </div>
+              <hr />
+            </div>
+          )
+        }
+        return null
+      })}
+    <div className="total-price">Subtotal: ${totalAmount()}</div>
     </div>
-  );
+    <div className="verify-section">
+      <div>
+        <input type="radio"></input>I agree to terms and conditions
+      </div>
+      <Link to="/billing">
+        <button type="submit" className="checkout-button">Check Out</button>
+      </Link>
+    </div>
+  </div>
+  )
 }
 
-export default CartProducts;
+export default CartProducts

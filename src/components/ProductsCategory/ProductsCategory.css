@@ -79,6 +79,7 @@
   max-width: 45%;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: .6s;
 }
 
 .wholepage .box-container .box img {
@@ -138,12 +139,35 @@
 
 .wholepage .box-container .box .product-title {
   font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
   position: relative;
-  bottom: 20px;
+  bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 5px;
+}
+
+.wholepage .box-container .box .product-title h5 {
+  padding: 0 5px;
+  height: auto;
+  width: 100%;
+}
+
+
+.wholepage .box-container .box .product-title del {
+  position: relative;
+  bottom: 30px;
+  right: 35px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 40px;
+  border-radius: 5px;
+  background-color: turquoise;
 }
 
 .wholepage .leftbar {

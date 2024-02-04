@@ -1,46 +1,59 @@
-import React, { useEffect, useState } from 'react'
-import {useCart} from 'react-use-cart'
-import { useParams, Link } from 'react-router-dom'
+import React, { useEffect, useState, useContext } from 'react'
+import { useParams } from 'react-router-dom'
+import { CartContext } from './../../LocalStorage/CartContext'
 import { AllProductsData } from './../../LocalStorage/AllProductDetails'
 import './SingleProductDetails.css'
 
 function SingleProductDetails() {
-    const [product,setProduct] = useState()
-    const [selectedColor, setSelectedColor] = useState()
-    const [selectedSize, setSelectedSize] = useState()
+    const {addItem, removeItem, cartItems} = useContext(CartContext)
+    const [product, setProduct] = useState()
+    const [selectedColor, setSelectedColor] = useState('')
+    const [selectedSize, setSelectedSize] = useState('')
 
-    const {items,addItem,updateItemQuantity} = useCart()
     const { id } = useParams()
-    
-    const colors = ["Blue", "Green", "Brown", "Pink"]
-    const sizes = ["s", "m", "l", "xl", "xxl"]
-    
-    useEffect(()=> {
-        const product = AllProductsData.find(x => x.id === parseInt(id))
+ 
+    useEffect(() => {
+        const singleProduct = AllProductsData.find(x => x.id === parseInt(id));
+        setProduct(singleProduct)
+    }, [id])
 
-        setProduct(product)
-    },[id])
-
-    if(product===undefined){
+    if (!product) {
         return null
     }
 
-  return (
-    <div>
-        <div className="single-product">
-        
-          <div className="left">
-          <img src={window.location.origin + product.image} alt={product.title}/>
-          </div>
-          
-          <div className="right">
-            <h1>{product.title}</h1>
+    const handleColorClick = (color) => {
+        setSelectedColor(color)
+    }
 
-            <div className="second-line">
+    const handleSizeClick = (size) => {
+        setSelectedSize(size)
+    }
+
+    const handleaddItem = () => {
+        if (selectedColor && selectedSize) {
+                const newProduct = { ...product }
+                newProduct.selectedColor = selectedColor
+                newProduct.selectedSize = selectedSize    
+        } else {
+            alert('Please select color and size before adding to cart.')
+        }
+    }
+
+    return (
+        <div>
+            <div className="single-product">
+                <div className="left">
+                    <img src={`${window.location.origin}` + product.image} alt={product.title} />
+                </div>
+                
+                <div className="right">
+                    <h1>{product.title}</h1>
+
+                    <div className="second-line">
               <div className="leftside">
                 <h3>${product.price}<span> / </span></h3>
                 <div>
-                  <del>$23</del>
+                  <del>${product.old_price}</del>
                   <p>25%</p>
                 </div>
               </div>
@@ -50,67 +63,57 @@ function SingleProductDetails() {
                 <p>3 reviews</p>
               </div>
             </div>
+                    
+                    <div className="third-line">
+                        <p>Select Color: </p>
+                        <ul>
+                            {product.color.map((color, index) => (
+                                <button key={index} onClick={() => handleColorClick(color)}>{color}</button>
+                            ))}
+                        </ul>
+                    </div>
 
-            <div className="third-line">
-              <p>Color: {selectedColor}</p>
-              <ul>
-                {colors.map((color) => (
-                <button key={color} onClick={(e) => setSelectedColor(color)}>
-                  {color}
-                </button>
-                ))}
-              </ul>
-            </div>
+                    <div className="fourth-line">
+                        <p>Select Size: </p>
+                        <ul>
+                            {product.size.map((size, index) => (
+                                <button key={index} onClick={() => handleSizeClick(size)}>{size}</button>
+                            ))}  
+                        </ul>
+                    </div>
 
-            <div className="fourth-line">
-              <p>Size: {selectedSize}</p>
-              <ul>
-                {sizes.map((size)=>(
-                <button key={size} onClick={(e) => setSelectedSize(size)}>{size}</button>
-                ))}
-              </ul>
-            </div>
+                    <div className="fifth-line">
+                        <p>{product.quantity} in stock</p>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    </div>
 
-            <div className="fifth-line">
-              <p>{product.quantity} in stock</p>
-              <ion-icon name="checkmark-circle-outline"></ion-icon>
-            </div>
+                    <div className="sixth-line">    
+                        <div className="left">
+                            <button onClick={() => removeItem(id)}>-</button>
+                            <p>{cartItems[id]}</p>
+                            <button onClick={() => addItem(id)}>+</button>
+                        </div>
+                    
+                        <div className="right" onClick={() => addItem(id)}>
+                            <p>Add to cart</p>
+                        </div>
+                    </div>
+                
+                    <div className="last-line">
+                        <p><ion-icon name="heart-outline"></ion-icon>Add to wishlist</p>
+                        <p><ion-icon name="swap-horizontal-outline"></ion-icon>Compare</p>
+                        <p><ion-icon name="share-social-outline"></ion-icon>Share</p>
+                        <p><ion-icon name="help-circle-outline"></ion-icon>Ask question</p>
+                    </div>
 
-            <div className="sixth-line">
-            
-                <div className="left">
-                <button onClick={() => updateItemQuantity(product.id, product.quantity - 1)}>-</button>
-                <p>{product.quantity}</p>
-                <button onClick={() => updateItemQuantity(product.id, product.quantity + 1)}>+</button>
+                    <div className="delivery-description">
+                        <p><ion-icon name="gift"></ion-icon>Free shipping and return: <span>Order over 100$</span></p>
+                        <p><ion-icon name="shield-checkmark-outline"></ion-icon>Estimate delivery: <span>2-7 days</span></p>
+                    </div>
                 </div>
-              
-              
-              <div className="right" onClick={()=> addItem(product)}>
-                <p>Add to cart</p>
-              </div>
             </div>
-
-            <div className="seventh-line">
-              <Link to="/billing"><button>Buy now</button></Link>
-            </div>
-            
-            <div className="last-line">
-              <p><ion-icon name="heart-outline"></ion-icon>Add to wishlist</p>
-              <p><ion-icon name="swap-horizontal-outline"></ion-icon>Compare</p>
-              <p><ion-icon name="share-social-outline"></ion-icon>Share</p>
-              <p><ion-icon name="help-circle-outline"></ion-icon>Ask question</p>
-            </div>
-
-            <div className="delivery-description">
-              <p><ion-icon name="gift"></ion-icon>Free shipping and return: <span>Order over 100$</span></p>
-              <p><ion-icon name="shield-checkmark-outline"></ion-icon>Estimate delivery: <span>2-7 days</span></p>
-            </div>
-
-          </div>
-          
         </div>
-    </div>
-  )
+    )
 }
 
 export default SingleProductDetails

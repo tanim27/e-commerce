@@ -1,10 +1,10 @@
-import React from "react";
-import { useCart } from "react-use-cart";
-import "./CheckOut.css";
+import React, { useContext } from "react"
+import { CartContext } from './../../LocalStorage/CartContext';
+import "./CheckOut.css"
 
 function CheckOut() {
-  const { items, isEmpty, cartTotal } = useCart();
-  const vat = cartTotal * 0.1;
+  const {AllProductsData, cartItems, totalAmount } = useContext(CartContext)
+  const vat = totalAmount * 0.1;
 
   return (
     <div>
@@ -59,15 +59,15 @@ function CheckOut() {
           <div className="major-right">
             <div className="order-summary">
               <h2 className="order-summary-title">Order Summary</h2>
-              {isEmpty ? (<h4 className="warning">Your cart is empty :(</h4>) : ("")}
-              {items.map((slide) => (
-                <tr key={slide.id} className="item-detail">
-                  <img src={slide.image} alt={slide.title} />
-                  <p className="pieces">{slide.quantity}x</p>
+              
+              {AllProductsData.map((product) => (
+                <tr key={product.id} className="item-detail">
+                  <img src={product.image} alt={product.title} />
+                  <p className="pieces">{cartItems[product.id]}x</p>
                   <div className="text-detail">
-                    <h4>{slide.title}</h4>
-                    <p>Color: {slide.color}</p>
-                    <p>${slide.price * slide.quantity}</p>
+                    <h4>{product.title}</h4>
+                    <p>Color: {product.color}</p>
+                    <p>${product.price * product.quantity}</p>
                   </div>
                 </tr>
               ))}
@@ -89,7 +89,7 @@ function CheckOut() {
                 </span>
                 <span>
                   <p>Subtotal:</p>
-                  <p>${cartTotal}</p>
+                  <p>${totalAmount()}</p>
                 </span>
                 <span>
                   <p>VAT:</p>
@@ -102,7 +102,7 @@ function CheckOut() {
                 <hr />
                 <span>
                   <p>Total:</p>
-                  <p>${cartTotal + vat}</p>
+                  <p>${totalAmount + vat}</p>
                 </span>
               </div>
               <button type="submit">Place order</button>

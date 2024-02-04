@@ -11,7 +11,7 @@ function SearchProductCard(props) {
           <div className="detail">
             <h5>{props.title}</h5>
             <p>Price: ${props.price}</p>
-            <p>Color: {props.color}</p>
+            <p>Available Colors: {props.color}</p>
           </div>
         </div>
       </Link>

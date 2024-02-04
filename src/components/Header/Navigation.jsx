@@ -1,8 +1,6 @@
-import React, {useRef, useEffect, useState} from 'react'
-import { useCart } from 'react-use-cart'
+import React, {useRef, useEffect, useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
-import { AllProductsData } from './../../LocalStorage/AllProductDetails'
-
+import { CartContext } from '../../LocalStorage/CartContext'
 import DropDownPerson from '../DropDownPerson/DropDownPerson'
 import LogInForm from '../LogInForm/LogInForm'
 import SignInForm from '../SignInForm/SignInForm'
@@ -11,13 +9,13 @@ import SearchProductCard from './SearchProductCard'
 import './Navigation.css'
 
 function Navigation() {
+    const {AllProductsData, totalItems} = useContext(CartContext)
     const [isNavbarActive, setIsNavbarActive] = useState(false)
     const [searchBoxOpen, setsearchBoxOpen] = useState(false)
     const [isPersonOpen, setIsPersonOpen] = useState(false)
     const [loginModalOpen, setLoginModalOpen] = useState(false)
     const [signupModalOpen, setSignupModalOpen] = useState(false)
     const [products, setProducts] = useState([])
-    const {totalItems} = useCart()
 
     function toggleNavbar () {
         setIsNavbarActive(!isNavbarActive)
@@ -76,7 +74,7 @@ function Navigation() {
         <div className="right-icon"  onClick={searchclick}><ion-icon name="search-outline"></ion-icon></div>
         <div className="right-icon" onClick={personclick} onRequestClose={personclick}><ion-icon name="person-outline"></ion-icon></div>
         
-        <Link to="/cart"><div className="right-icon"><ion-icon name="bag-check"></ion-icon><span>({totalItems})</span></div></Link>
+        <Link to="/cart"><div className="right-icon"><ion-icon name="bag-check"></ion-icon><span>({totalItems()})</span></div></Link>
     </div>
 </div>
 

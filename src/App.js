@@ -1,5 +1,5 @@
-import React from 'react';
-import {Routes, Route} from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import HomePage from './Pages/HomePage/Home'
 import ProductsCategoryPage from './Pages/ProductsCategoryPage/ProductsCategoryPage'
@@ -9,6 +9,7 @@ import CheckOutPage from './Pages/CheckOutPage/CheckOutPage'
 
 function App() {
   return (
+    <BrowserRouter>
     <Routes>
       <Route path='/' element={<HomePage/>}></Route>
       <Route path='/productlist' element={<ProductsCategoryPage/>}> </Route>
@@ -16,6 +17,7 @@ function App() {
       <Route path='/cart' element={<CartPage/>}> </Route>
       <Route path='/billing' element={<CheckOutPage/>}></Route>
     </Routes>
+    </BrowserRouter>
   )
 }
 

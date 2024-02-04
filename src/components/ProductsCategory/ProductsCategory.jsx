@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
-import { AllProductsData } from './../../LocalStorage/AllProductDetails'
+import React, { useState} from 'react'
+import { AllProductsData } from '../../LocalStorage/AllProductDetails'
 import Card from './Card'
 import './ProductsCategory.css'
 
 function ProductsCategory() {
-  const options = ["All Products", "Sweater", "Hoodie", "Shirt"];
-  const gendercategories = ["All", "Men", "Women"];
-  const prices = ["All", "0-49", "50-99", "100-149", "150-199", "200+"];
-  const sizes = ["All", "s", "m", "l", "xl", "xxl"];
-  const colors = ["All", "Blue", "Green", "Brown", "Pink"];
+  const options = ["All Products", "Sweater", "Hoodie", "Shirt"]
+  const gendercategories = ["All", "Men", "Women"]
+  const prices = ["All", "0-49", "50-99", "100-149", "150-199", "200+"]
+  const sizes = ["All", "s", "m", "l", "xl", "xxl"]
+  const colors = ["All", "Blue", "Green", "Brown", "Pink"]
 
-  const [selected, setSelected] = useState("All Products");
-  const [selectedGender, setSelectedGender] = useState("All");
-  const [selectedPrice, setSelectedPrice] = useState("All");
+  const [selected, setSelected] = useState("All Products")
+  const [selectedGender, setSelectedGender] = useState("All")
+  const [selectedPrice, setSelectedPrice] = useState("All")
   const [selectedSize, setSelectedSize] = useState("All")
-  const [selectedColor, setSelectedColor] = useState("All");
+  const [selectedColor, setSelectedColor] = useState("All")
 
   const [isLeftBarActive, setIsLeftBarActive] = useState()
 

@@ -1,5 +1,4 @@
 import React from "react"
-import { CartProvider } from 'react-use-cart'
 
 import Navigation from './../../components/Header/Navigation'
 import TopBanner from './../../components/TopBanner/TopBanner'
@@ -12,7 +11,6 @@ import Footer from './../../components/Footer/Footer'
 function HomePage() {
   return (
     <div>
-      <CartProvider>
         <Navigation/>
         <TopBanner/>
         <NewProducts/>
@@ -20,7 +18,6 @@ function HomePage() {
         <Exclusive/>
         <Tips/>
         <Footer/>
-      </CartProvider>
     </div>
   )
 }

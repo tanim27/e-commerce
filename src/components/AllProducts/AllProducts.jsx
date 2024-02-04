@@ -1,11 +1,12 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { AllProductsData } from './../../LocalStorage/AllProductDetails'
 import Card from './Card'
 import './AllProducts.css'
 
 function AllProducts() {
-  const [allMenuOpen, setAllMenuOpen] = useState(false);
-  const [selected, setSelected] = useState("All Products");
+  
+  const [allMenuOpen, setAllMenuOpen] = useState(false)
+  const [selected, setSelected] = useState("All Products")
   const menuRef = useRef()
   const options = ["All Products", "Sweater", "Hoodie","Shirt"]
   const filteredData = selected === "All Products" ? AllProductsData : AllProductsData.filter((x) => x.category === selected.toLowerCase())
