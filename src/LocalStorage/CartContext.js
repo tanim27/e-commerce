@@ -14,20 +14,36 @@ const getDefaultCart = () => {
 const CartContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart())
 
-  const addItem = (id) => {
-    setCartItems((prev) => ({...prev,[id]:prev[id]+1}))
-    console.log(cartItems)
+  const addItem = (id, selectedColor, selectedSize) => {
+  const productId = `${id}-${selectedColor}-${selectedSize}`
+    if (cartItems[productId]) {
+      // If it is, just increment its quantity
+      setCartItems((prev) => ({ ...prev, [productId]: prev[productId] + 1 }))
+    } else {
+      // If it's not, add it to the cart with quantity 1
+      setCartItems((prev) => ({ ...prev, [productId]: 1 }))
+    }
   }
+  
 
-  const removeItem = (id) => {
-    setCartItems((prev) => ({...prev,[id]:prev[id]-1}))
+  const removeItem = (id, selectedColor, selectedSize) => {
+    const productId = `${id}-${selectedColor}-${selectedSize}`
+    
+    if (cartItems[productId] > 1) {
+      setCartItems((prev) => ({ ...prev, [productId]: prev[productId] - 1 }))
+    } else {
+      // If quantity is 1, remove the product from the cart
+      const { [productId]: removedItem, ...rest } = cartItems
+      setCartItems(rest)
+    }
   }
+  
 
   const totalAmount = () => {
     let total = 0
     for (const item in cartItems) {
       if (cartItems[item]>0){
-        let itemInfo = AllProductsData.find((product) => product.id = item)
+        let itemInfo = AllProductsData.find((product) => product.id === parseInt(item))
         total += itemInfo.price * cartItems[item]
       }
       

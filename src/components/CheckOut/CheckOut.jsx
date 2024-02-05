@@ -1,10 +1,9 @@
 import React, { useContext } from "react"
-import { CartContext } from './../../LocalStorage/CartContext';
+import { CartContext } from './../../LocalStorage/CartContext'
 import "./CheckOut.css"
 
 function CheckOut() {
   const {AllProductsData, cartItems, totalAmount } = useContext(CartContext)
-  const vat = totalAmount * 0.1;
 
   return (
     <div>
@@ -60,17 +59,24 @@ function CheckOut() {
             <div className="order-summary">
               <h2 className="order-summary-title">Order Summary</h2>
               
-              {AllProductsData.map((product) => (
-                <tr key={product.id} className="item-detail">
-                  <img src={product.image} alt={product.title} />
-                  <p className="pieces">{cartItems[product.id]}x</p>
-                  <div className="text-detail">
-                    <h4>{product.title}</h4>
-                    <p>Color: {product.color}</p>
-                    <p>${product.price * product.quantity}</p>
-                  </div>
-                </tr>
-              ))}
+              {Object.keys(cartItems).map((cartItemId) => {
+                const [id, color, size] = cartItemId.split('-')
+                const product = AllProductsData.find(product => product.id === parseInt(id))
+
+                if (product && cartItems[cartItemId] > 0){
+                  return (
+                    <div key={cartItemId} className="item-detail">
+                      <img src={product.image} alt={product.title} />
+                      <p className="pieces">{cartItems[cartItemId]}x</p>
+                      <div className="text-detail">
+                        <h3>{product.title}</h3>
+                        <p>Size: {size}</p>
+                        <p>Color: {color}</p>
+                        <p>Price: ${product.price}</p>
+                      </div>
+                    </div>)}
+                    return null
+              })}
             </div>
 
             <div className="payment-summary">
@@ -93,7 +99,7 @@ function CheckOut() {
                 </span>
                 <span>
                   <p>VAT:</p>
-                  <p>${vat}</p>
+                  <p>$</p>
                 </span>
                 <span>
                   <p>Promo discount:</p>
@@ -102,7 +108,7 @@ function CheckOut() {
                 <hr />
                 <span>
                   <p>Total:</p>
-                  <p>${totalAmount + vat}</p>
+                  <p>$</p>
                 </span>
               </div>
               <button type="submit">Place order</button>
@@ -111,7 +117,7 @@ function CheckOut() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default CheckOut;
+export default CheckOut

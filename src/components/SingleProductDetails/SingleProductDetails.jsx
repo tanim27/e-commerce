@@ -5,17 +5,20 @@ import { AllProductsData } from './../../LocalStorage/AllProductDetails'
 import './SingleProductDetails.css'
 
 function SingleProductDetails() {
-    const {addItem, removeItem, cartItems} = useContext(CartContext)
-    const [product, setProduct] = useState()
+    const { addItem, removeItem, cartItems } = useContext(CartContext)
+    const { id } = useParams()
     const [selectedColor, setSelectedColor] = useState('')
     const [selectedSize, setSelectedSize] = useState('')
+    const cartItemID = `${id}-${selectedColor}-${selectedSize}`
+    const [product, setProduct] = useState()
+    const [itemAmount, setItemAmount] = useState(0)
 
-    const { id } = useParams()
- 
     useEffect(() => {
-        const singleProduct = AllProductsData.find(x => x.id === parseInt(id));
+        const singleProduct = AllProductsData.find(x => x.id === parseInt(id))
         setProduct(singleProduct)
-    }, [id])
+        
+        setItemAmount(cartItems[cartItemID] || "0")
+    }, [id,cartItems[cartItemID]])
 
     if (!product) {
         return null
@@ -29,16 +32,20 @@ function SingleProductDetails() {
         setSelectedSize(size)
     }
 
-    const handleaddItem = () => {
+    const handleAddItem = () => {
         if (selectedColor && selectedSize) {
-                const newProduct = { ...product }
-                newProduct.selectedColor = selectedColor
-                newProduct.selectedSize = selectedSize    
+          addItem(id, selectedColor, selectedSize)
         } else {
-            alert('Please select color and size before adding to cart.')
+          alert('Please select color and size before adding to cart.')
+        }
+      }
+    
+    const handleRemoveItem = () => {
+        if (selectedColor && selectedSize){
+            removeItem(id, selectedColor, selectedSize)
         }
     }
-
+      
     return (
         <div>
             <div className="single-product">
@@ -48,9 +55,8 @@ function SingleProductDetails() {
                 
                 <div className="right">
                     <h1>{product.title}</h1>
-
                     <div className="second-line">
-              <div className="leftside">
+                <div className="leftside">
                 <h3>${product.price}<span> / </span></h3>
                 <div>
                   <del>${product.old_price}</del>
@@ -89,12 +95,12 @@ function SingleProductDetails() {
 
                     <div className="sixth-line">    
                         <div className="left">
-                            <button onClick={() => removeItem(id)}>-</button>
-                            <p>{cartItems[id]}</p>
-                            <button onClick={() => addItem(id)}>+</button>
+                            <button onClick={handleRemoveItem}>-</button>
+                            <p>{itemAmount}</p>
+                            <button onClick={handleAddItem}>+</button>
                         </div>
                     
-                        <div className="right" onClick={() => addItem(id)}>
+                        <div className="right" onClick={handleAddItem}>
                             <p>Add to cart</p>
                         </div>
                     </div>

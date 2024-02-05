@@ -37,8 +37,7 @@
 
 .cartitems .cartitems-format .product img {
     position: relative;
-    left: 10px;
-    height: 80px;
+    height: 100px;
     width: 80px;
 }
 
@@ -133,6 +132,15 @@
 
     .cartitems .cartitems-format-main {
         display: none;
+        grid-template-columns: 3fr 1fr 3fr;
+    }
+
+    .cartitems .cartitems-format-main .responsive-lines {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        align-items: center;
+        text-align: center;
+        gap: 100px;
     }
 
     .cartitems .cartitems-format-main .product {

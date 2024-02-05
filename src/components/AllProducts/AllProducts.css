@@ -183,8 +183,8 @@
 
 .product-showlist .box-container .box .product-title del {
   position: relative;
-  bottom: 30px;
-  right: 35px;
+  bottom: 25px;
+  right: 40px;
   font-size: 14px;
   display: flex;
   justify-content: center;
