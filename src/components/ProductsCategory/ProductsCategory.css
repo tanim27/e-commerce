@@ -319,7 +319,8 @@
     background: #eeee;
     z-index: 100;
     transition: all 0.5s ease;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .wholepage .leftbar.leftbar-active {
@@ -337,6 +338,21 @@
     width: 30px;
     font-size: 2rem;
     cursor: pointer;
+  }
+
+  .wholepage .leftbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .wholepage .leftbar::-webkit-scrollbar-track {
+    background-color: #eeee ;
+  }
+  
+  .wholepage .leftbar::-webkit-scrollbar-thumb {
+    background: silver;
+    background-clip: content-box;
+    border: 1px solid transparent;
+    border-radius: 5px;
   }
 
   .wholepage .leftbar .filter {
