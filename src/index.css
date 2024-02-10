@@ -34,10 +34,39 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: grey;
+  background: silver;
   background-clip: content-box;
   border: 1px solid transparent;
   border-radius: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit; 
+  font-weight: bold; 
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 a {

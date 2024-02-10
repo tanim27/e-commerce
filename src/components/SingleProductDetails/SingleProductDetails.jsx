@@ -57,7 +57,7 @@ function SingleProductDetails() {
                     <h1>{product.title}</h1>
                     <div className="second-line">
                         <div className="leftside">
-                        <h3>${product.price}<span> / </span></h3>
+                        <div className="price">${product.price}<span> / </span></div>
                         <div>
                             <del>${product.old_price}</del>
                             <p>25%</p>

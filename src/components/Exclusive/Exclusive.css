@@ -108,14 +108,14 @@
     z-index: 900;
 }
 
-.exclusive .features .left .description h3, .exclusive .features .right .description h3 {
+.exclusive .features .left .description h4, .exclusive .features .right .description h4 {
     position: relative;
     font-size: 1.4rem;
     margin-bottom: 5px;
     color: #eeee;
 }
 
-.exclusive .features .left .description h3::after, .exclusive .features .right .description h3::after {
+.exclusive .features .left .description h4::after, .exclusive .features .right .description h4::after {
     position: absolute;
     left: 1px;
     bottom: -10px;

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Navigation from './../../components/Header/Navigation'
 import ProductsCategory from './../../components/ProductsCategory/ProductsCategory'
+import Footer from './../../components/Footer/Footer';
 
 function ProductsCategoryPage() {
   return (
     <div>
-        <Navigation/>
         <ProductsCategory/>
+        <Footer/>
     </div>
   )
 }

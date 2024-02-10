@@ -140,7 +140,7 @@ footer .bottom-side .icons li:hover {
 }
 
 
-@media (max-width:575px) {
+@media (max-width:768px) {
    
     footer .top-side {
         flex-direction: column;

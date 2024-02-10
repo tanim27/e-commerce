@@ -23,7 +23,7 @@
 
 .product-showlist .title .category-title {
   position: relative;
-  left: 5px;
+  left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

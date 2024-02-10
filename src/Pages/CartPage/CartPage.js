@@ -6,7 +6,7 @@ import CartProducts from './../../components/CartProducts/CartProducts'
 function CartPage() {
   return (
     <div>
-        <Navigation/>
+        
         <CartProducts/>
     </div>
   )

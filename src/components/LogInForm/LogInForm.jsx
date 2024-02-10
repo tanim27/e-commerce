@@ -28,7 +28,7 @@ function LogInForm({ visible, close }) {
         <section className="container-login">
           <div className="close-login"><ion-icon name="close" onClick={close}></ion-icon></div>
           <form className="log-in">
-            <h1>Sign In with</h1>
+            <h2>Sign In with</h2>
             <div className="social-icons">
               <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
               <a href=""><ion-icon name="logo-facebook"></ion-icon></a>

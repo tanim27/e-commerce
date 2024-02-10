@@ -11,8 +11,8 @@ isOpen={visible}
 onRequestClose={close}
 style={{
     content: {
-        height: "500px",
-        width: "400px",
+        height: "550px",
+        width: "425px",
         top: '50%',
         left: '50%',
         right: 'auto',
@@ -29,7 +29,7 @@ style={{
             <section className="container-signin">
             <div className="close-signin"><ion-icon name="close" onClick={close}></ion-icon></div>
             <form className="sign-in">
-                <h1>Create Account with</h1>
+                <h2>Create Account with</h2>
                 <div className="social-icons">
                     <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
                     <a href=""><ion-icon name="logo-facebook"></ion-icon></a>

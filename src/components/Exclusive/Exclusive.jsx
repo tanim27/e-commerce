@@ -11,7 +11,7 @@ function Exclusive() {
                     <div className="promotion about-box">
                         <img src="images/feature-1.jpg" alt=""/>
                         <div className="description">
-                            <h3>Promotions and Discounts</h3>
+                            <h4>Promotions and Discounts</h4>
                             <p>Get 60% off on every spring collection product</p>
                             <button><span>Grab It<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
@@ -19,7 +19,7 @@ function Exclusive() {
                     <div className="trending about-box">
                         <img src="images/feature-2.jpg" alt="aaa"/>
                         <div className="description">
-                            <h3>Trending Now</h3>
+                            <h4>Trending Now</h4>
                             <p>Explore the trending world of our products</p>
                             <button><span>Explore<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
@@ -30,7 +30,7 @@ function Exclusive() {
                     <div className="custom about-box">
                         <img src="images/feature-3.jpg" alt=""/>
                         <div className="description">
-                            <h3>Customize Product</h3>
+                            <h4>Customize Product</h4>
                             <p>You can customize your design from us.</p>
                             <button><span>Let's Do<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>
@@ -38,7 +38,7 @@ function Exclusive() {
                     <div className="blog about-box">
                         <img src="images/feature-4.jpg" alt=""/>
                         <div className="description">
-                            <h3>Blogs On Socials</h3>
+                            <h4>Blogs On Socials</h4>
                             <p>Explore the influencers on social media</p>
                             <button><span>Explore<ion-icon name="arrow-forward-outline"></ion-icon></span></button>
                         </div>

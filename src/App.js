@@ -6,10 +6,12 @@ import ProductsCategoryPage from './Pages/ProductsCategoryPage/ProductsCategoryP
 import SingleProductDetailsPage from './Pages/SingleProductDetailsPage/SingleProductDetailsPage'
 import CartPage from "./Pages/CartPage/CartPage"
 import CheckOutPage from './Pages/CheckOutPage/CheckOutPage'
+import Navigation from './components/Header/Navigation';
 
 function App() {
   return (
     <BrowserRouter>
+    <Navigation/>
     <Routes>
       <Route path='/' element={<HomePage/>}></Route>
       <Route path='/productlist' element={<ProductsCategoryPage/>}> </Route>

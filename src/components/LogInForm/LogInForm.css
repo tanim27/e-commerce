@@ -9,7 +9,7 @@
   .container-login .log-in {
     font-family: "Playfair Display", serif;
     position: relative;
-    top: 20px;
+    top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +33,7 @@
     cursor: pointer;
   }
   
-  .container-login .log-in h1 {
+  .container-login .log-in h2 {
     text-align: center;
   }
   

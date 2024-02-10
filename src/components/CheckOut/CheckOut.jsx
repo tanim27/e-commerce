@@ -11,7 +11,7 @@ function CheckOut() {
         <h2 className="checkoutpage-title">Checkout</h2>
         <div className="major">
           <div className="major-left">
-            <h2 className="billing-detail-title">Billing Details</h2>
+            <h3 className="billing-detail-title">Billing Details</h3>
             <form className="billing-details" action="">
               <div className="top">
                 <div className="top1">
@@ -57,7 +57,7 @@ function CheckOut() {
 
           <div className="major-right">
             <div className="order-summary">
-              <h2 className="order-summary-title">Order Summary</h2>
+              <h3 className="order-summary-title">Order Summary</h3>
               
               {Object.keys(cartItems).map((cartItemId) => {
                 const [id, color, size] = cartItemId.split('-')
