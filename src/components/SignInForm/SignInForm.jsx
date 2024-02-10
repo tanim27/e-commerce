@@ -12,7 +12,7 @@ onRequestClose={close}
 style={{
     content: {
         height: "550px",
-        width: "425px",
+        width: "400px",
         top: '50%',
         left: '50%',
         right: 'auto',
