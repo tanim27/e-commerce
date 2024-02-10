@@ -344,7 +344,10 @@
     left: 30px;
   }
 
-
+  .wholepage .leftbar .filter .accordion-panel .button-content button {
+    color: #111;
+    background: silver;
+  }
 
   .wholepage .filter-button {
     position: fixed;
