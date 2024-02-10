@@ -69,7 +69,7 @@ function CheckOut() {
                       <img src={product.image} alt={product.title} />
                       <p className="pieces">{cartItems[cartItemId]}x</p>
                       <div className="text-detail">
-                        <h3>{product.title}</h3>
+                        <h5>{product.title}</h5>
                         <p>Size: {size}</p>
                         <p>Color: {color}</p>
                         <p>Price: ${product.price}</p>
