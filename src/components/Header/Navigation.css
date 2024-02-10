@@ -439,7 +439,7 @@ header {
   
   @media (max-width:700px) {
     .searchbar .searchbox form .searchbox-icons {
-      left: 5px;
+      left: 10px;
     }
   
     .searchbar .searchbox form input {
@@ -449,7 +449,7 @@ header {
       top: 0;
       left: 5px;
       height: 30px;
-      width: 70%;
+      width: 75%;
       border: none;
       outline: none;
       background: none;
