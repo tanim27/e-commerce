@@ -414,7 +414,7 @@ header {
     width: 100%;
     padding-bottom: 20px;
     border-bottom: 1px solid #dddd;
-    background: #eeee;
+    background: silver;
   }
   
   .searchbar .product-description img {
@@ -431,11 +431,12 @@ header {
     top: 10px;
     left: 30px;
     height: auto;
+    width: 80%;
   }
 
   .searchbar .product-description .detail h5 {
     height: auto;
-    width: 90%;
+    width: 100%;
   }
   
   .searchbar .product-description .detail p {
@@ -460,5 +461,10 @@ header {
       border: none;
       outline: none;
       background: none;
+    }
+
+    .searchbar .product-description .detail h5 {
+      height: auto;
+      width: 70%;
     }
   }
