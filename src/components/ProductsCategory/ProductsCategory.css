@@ -208,6 +208,7 @@
 .wholepage .leftbar .filter .accordion-panel ul {
   margin: 10px 0;
   font-size: 14px;
+  width: 120px;
 }
 
 .wholepage .leftbar .filter .accordion-panel ul li {
@@ -259,7 +260,7 @@
   cursor: pointer;
   transition: .6s all;
   color: #111;
-  background: silver;
+  background: #eeee;
 }
 
 .wholepage .leftbar .filter .accordion-panel .button-content button:hover {
