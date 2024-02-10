@@ -47,17 +47,17 @@
 .wholepage hr {
   position: relative;
   top: 10px;
-  left: 30px;
+  left: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 95%;
+  width: 90%;
   opacity: 0.3;
 }
 
 .wholepage .box-container {
   position: relative;
-  top: 40px;
+  top: 30px;
   left: 0;
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +173,7 @@
 .wholepage .leftbar {
   font-family: "Playfair Display", serif;
   position: absolute;
-  top: 160px;
+  top: 130px;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -182,8 +182,6 @@
   height: auto;
   width: 160px;
   padding-bottom: 20px;
-  border-right: 1px solid silver;
-  border-bottom: 1px solid silver;
 }
 
 .wholepage .leftbar .leftbar-close-icon {
@@ -203,21 +201,74 @@
   gap: 10px;
 }
 
-.wholepage .leftbar .filter .categorylist {
-  height: auto;
-  width: 110px;
-  margin-bottom: 5px;
+.wholepage .leftbar .filter .accordion-panel {
+  margin: 10px 0;
 }
 
-.wholepage .leftbar .filter .categorylist ul {
+.wholepage .leftbar .filter .accordion-panel ul {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.wholepage .leftbar .filter .accordion-panel ul li {
   position: relative;
-  top: 0;
-  left: 20px;
+  left: 10px;
+  margin: 5px 0;
+  cursor: pointer;
 }
 
-.wholepage .leftbar .filter .categorylist ul li {
-  margin: 5px;
+.wholepage .leftbar .filter .accordion-panel .accordion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
   cursor: pointer;
+}
+
+.wholepage .leftbar .filter .accordion-panel .accordion-container .accordion-title {
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.wholepage .leftbar .filter .accordion-panel .accordion-container .accordion-icon {
+  transition: 0.3s ease-in-out;
+}
+
+.wholepage .leftbar .filter .accordion-panel .accordion-container .accordion-icon.rotate-icon {
+  transform: rotate(45deg);
+}
+
+.wholepage .leftbar .filter .accordion-panel .button-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 140px;
+}
+
+.wholepage .leftbar .filter .accordion-panel .button-content button {
+  font-family: "Playfair Display", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: .6s all;
+  color: #111;
+  background: silver;
+}
+
+.wholepage .leftbar .filter .accordion-panel .button-content button:hover {
+  background: #111;
+  color: #fff;
+}
+
+.wholepage .leftbar .filter .accordion-panel .color-buttons button {
+  width: 50px;
 }
 
 .wholepage .filter-button {
@@ -291,6 +342,8 @@
     top: 50px;
     left: 30px;
   }
+
+
 
   .wholepage .filter-button {
     position: fixed;

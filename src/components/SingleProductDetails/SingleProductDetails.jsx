@@ -56,19 +56,19 @@ function SingleProductDetails() {
                 <div className="right">
                     <h1>{product.title}</h1>
                     <div className="second-line">
-                <div className="leftside">
-                <h3>${product.price}<span> / </span></h3>
-                <div>
-                  <del>${product.old_price}</del>
-                  <p>25%</p>
-                </div>
-              </div>
+                        <div className="leftside">
+                        <h3>${product.price}<span> / </span></h3>
+                        <div>
+                            <del>${product.old_price}</del>
+                            <p>25%</p>
+                        </div>
+                        </div>
 
-              <div className="rightside">
-                <p><ion-icon name="star-half-sharp"></ion-icon>4.5</p>
-                <p>3 reviews</p>
-              </div>
-            </div>
+                        <div className="rightside">
+                            <p><ion-icon name="star-half-sharp"></ion-icon>4.5</p>
+                            <p>3 reviews</p>
+                        </div>
+                    </div>
                     
                     <div className="third-line">
                         <p>Select Color: </p>

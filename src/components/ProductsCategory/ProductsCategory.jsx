@@ -3,6 +3,9 @@ import { AllProductsData } from '../../LocalStorage/AllProductDetails'
 import Card from './Card'
 import './ProductsCategory.css'
 
+import { Accordion } from "keep-react";
+import { Plus } from "phosphor-react";
+
 function ProductsCategory() {
   const options = ["All Products", "Sweater", "Hoodie", "Shirt"]
   const gendercategories = ["All", "Men", "Women"]
@@ -10,6 +13,7 @@ function ProductsCategory() {
   const sizes = ["All", "s", "m", "l", "xl", "xxl"]
   const colors = ["All", "Blue", "Green", "Brown", "Pink"]
 
+  
   const [selected, setSelected] = useState("All Products")
   const [selectedGender, setSelectedGender] = useState("All")
   const [selectedPrice, setSelectedPrice] = useState("All")
@@ -18,10 +22,25 @@ function ProductsCategory() {
 
   const [isLeftBarActive, setIsLeftBarActive] = useState()
 
+  const [panelOpen, setPanelOpen] = useState({
+    sizes: false,
+    colors: false,
+    categories: false,
+    prices: false
+  });
+  
+
   const toggleLeftBar = () => {
     setIsLeftBarActive(!isLeftBarActive)
   }
 
+  const togglePanel = (panel) => {
+    setPanelOpen(prevState => ({
+      ...prevState,
+      [panel]: !prevState[panel]
+    }));
+  };  
+  
   const filteredData = AllProductsData.filter(
     (x) =>
       (selected === "All Products" || x.category === selected.toLowerCase()) &&
@@ -47,7 +66,6 @@ function ProductsCategory() {
           ))}
         </div>
 
-        <hr />
         <div className="box-container">
           {filteredData.map((product) => (
             <Card key={product.id} {...product} product={product} />
@@ -58,43 +76,81 @@ function ProductsCategory() {
           <div className="leftbar-close-icon" onClick={toggleLeftBar}><ion-icon name="close"></ion-icon></div>
           <div className="filter">
             <h3>Filter</h3>
-            <div className="categorylist">
-              <h4>Category</h4>
-              <ul>
-                {gendercategories.map((gender) => (
-                <li key={gender} onClick={(e) => setSelectedGender(gender)}>{gender}</li>
+            <Accordion>
+              <Accordion.Panel className="accordion-panel">
+                {['sizes'].map((panel) => (
+                <Accordion.Container className="accordion-container" key={panel} onClick={() => togglePanel(panel)}>
+                  <Accordion.Title className="accordion-title" onClick={() => togglePanel(panel)}>Sizes</Accordion.Title>
+                  <Accordion.Icon className={`accordion-icon ${panelOpen[panel] ? "rotate-icon" : ""}`} onClick={() => togglePanel(panel)}>
+                    <Plus size={20} color="#444" />
+                  </Accordion.Icon>
+                </Accordion.Container>
                 ))}
-              </ul>
-            </div>
+                <Accordion.Content>
+                <ul className="button-content">
+                  {sizes.map((size) => (
+                  <button key={size} onClick={(e) => setSelectedGender(size)}>{size}</button>
+                  ))}
+                </ul>
+                </Accordion.Content>
+              </Accordion.Panel>
 
-            <div className="categorylist">
-              <h4>Price</h4>
-              <ul>
-                {prices.map((price)=>(
-                <li key={price} onClick={(e) => setSelectedPrice(price)}>{price}</li>
+              <Accordion.Panel className="accordion-panel">
+                {['colors'].map((panel) => (
+                <Accordion.Container className="accordion-container" key={panel} onClick={() => togglePanel(panel)}>
+                  <Accordion.Title className="accordion-title" onClick={() => togglePanel(panel)}>Colors</Accordion.Title>
+                  <Accordion.Icon className={`accordion-icon ${panelOpen[panel] ? "rotate-icon" : ""}`} onClick={() => togglePanel(panel)}>
+                    <Plus size={20} color="#444" />
+                  </Accordion.Icon>
+                </Accordion.Container>
                 ))}
-              </ul>
-            </div>
+                <Accordion.Content>
+                <ul className="button-content color-buttons">
+                  {colors.map((color) => (
+                  <button key={color} onClick={(e) => setSelectedGender(color)}>{color}</button>
+                  ))}
+                </ul>
+                </Accordion.Content>
+              </Accordion.Panel>
 
-            <div className="categorylist">
-              <h4>Size</h4>
-              <ul>
-                {sizes.map((size)=>(
-                <li key={size} onClick={(e) => setSelectedSize(size)}>{size}</li>
+              <Accordion.Panel className="accordion-panel">
+                {['categories'].map((panel) => (
+                <Accordion.Container className="accordion-container" key={panel} onClick={() => togglePanel(panel)}>
+                  <Accordion.Title className="accordion-title" onClick={() => togglePanel(panel)}>Categories</Accordion.Title>
+                  <Accordion.Icon className={`accordion-icon ${panelOpen[panel] ? "rotate-icon" : ""}`} onClick={() => togglePanel(panel)}>
+                    <Plus size={20} color="#444" />
+                  </Accordion.Icon>
+                </Accordion.Container>
                 ))}
-              </ul>
-            </div>
+                <Accordion.Content>
+                <ul>
+                  {gendercategories.map((gender) => (
+                  <li key={gender} onClick={(e) => setSelectedGender(gender)}>{gender}</li>
+                  ))}
+                </ul>
+                </Accordion.Content>
+              </Accordion.Panel>
 
-            <div className="categorylist">
-              <h4>Color</h4>
-              <ul>
-                {colors.map((color) => (
-                <li key={color} onClick={(e) => setSelectedColor(color)}>{color}</li>
+              <Accordion.Panel className="accordion-panel">
+                {['prices'].map((panel) => (
+                <Accordion.Container className="accordion-container" key={panel} onClick={() => togglePanel(panel)}>
+                  <Accordion.Title className="accordion-title" onClick={() => togglePanel(panel)}>Prices</Accordion.Title>
+                  <Accordion.Icon className={`accordion-icon ${panelOpen[panel] ? "rotate-icon" : ""}`} onClick={() => togglePanel(panel)}>
+                    <Plus size={20} color="#444" />
+                  </Accordion.Icon>
+                </Accordion.Container>
                 ))}
-              </ul>
-            </div>
+                <Accordion.Content>
+                <ul>
+                  {prices.map((price) => (
+                  <li key={price} onClick={(e) => setSelectedGender(price)}>{price}</li>
+                  ))}
+                </ul>
+                </Accordion.Content>
+              </Accordion.Panel>
+            </Accordion>
+
           </div>
-
         </div>
 
         <div className="filter-button" onClick={toggleLeftBar}><ion-icon name="funnel-outline"></ion-icon></div>
