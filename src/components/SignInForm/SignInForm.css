@@ -7,13 +7,15 @@
 .container-signin .sign-in {
     font-family: 'Playfair Display', serif;
     position: relative;
-    top: 30px;
+    top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 30px 40px;
+    width: 90%;
+    padding: 20px 10px;
+    margin-bottom: 10px;
     border: 1px solid silver;
     border-radius: 10px;
     overflow: hidden;
@@ -71,7 +73,7 @@
 
 .container-signin .sign-in input{
     background-color: #eeee;
-    width: 120%;
+    width: 100%;
     margin: 8px 0;
     padding: 10px 15px;
     border: none;
@@ -108,8 +110,5 @@
 }
 
 @media (max-width: 900px) {
-    .container-signin .sign-in {
-        width: 80%;
-        padding: 30px;
-    }
+    
 }
