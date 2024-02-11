@@ -50,3 +50,10 @@
 .call-to-action:hover button {
   transform: scale(1.3);
 }
+
+@media (max-width: 650px) {
+  .call-to-action {
+    position: fixed;
+    right: 30px;
+  }
+}
