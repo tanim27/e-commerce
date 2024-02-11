@@ -4,6 +4,7 @@ import "./CheckOut.css"
 
 function CheckOut() {
   const {AllProductsData, cartItems, totalAmount } = useContext(CartContext)
+  let vat = 0.1 * totalAmount()
 
   return (
     <div>
@@ -99,7 +100,7 @@ function CheckOut() {
                 </span>
                 <span>
                   <p>VAT:</p>
-                  <p>$</p>
+                  <p>${vat}</p>
                 </span>
                 <span>
                   <p>Promo discount:</p>
@@ -108,7 +109,7 @@ function CheckOut() {
                 <hr />
                 <span>
                   <p>Total:</p>
-                  <p>$</p>
+                  <p>${vat+totalAmount()}</p>
                 </span>
               </div>
               <button type="submit">Place order</button>

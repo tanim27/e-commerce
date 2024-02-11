@@ -1,12 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
+import Navigation from './components/Header/Navigation'
 import HomePage from './Pages/HomePage/Home'
 import ProductsCategoryPage from './Pages/ProductsCategoryPage/ProductsCategoryPage'
 import SingleProductDetailsPage from './Pages/SingleProductDetailsPage/SingleProductDetailsPage'
 import CartPage from "./Pages/CartPage/CartPage"
 import CheckOutPage from './Pages/CheckOutPage/CheckOutPage'
-import Navigation from './components/Header/Navigation';
+import CallToAction from './components/CallToAction/CallToAction'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/cart' element={<CartPage/>}> </Route>
       <Route path='/billing' element={<CheckOutPage/>}></Route>
     </Routes>
+    <CallToAction/>
     </BrowserRouter>
   )
 }

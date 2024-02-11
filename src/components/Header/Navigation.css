@@ -315,7 +315,7 @@ header {
   .branding {
     display: inline;
     position: absolute;
-    top: 2px;
+    top: 0;
     right: 42%;
     font-size: 1.6rem;
   }
