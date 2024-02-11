@@ -54,6 +54,6 @@
 @media (max-width: 650px) {
   .call-to-action {
     position: fixed;
-    right: 30px;
+    right: 20px;
   }
 }
