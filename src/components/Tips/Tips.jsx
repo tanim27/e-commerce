@@ -32,21 +32,21 @@ function Tips() {
       >
         <SwiperSlide>
             <div className="tips">
-                <img src="images/blog_01.jpg" alt=""/>
+                <img src="assets/blog_01.jpg" alt=""/>
                 <button className="tips-button">Watch<span><ion-icon name="eye-outline"></ion-icon></span></button>
                 <h4>What is easier knitting or crocheting?</h4>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className="tips">
-                <img src="images/blog_02.jpg" alt=""/>
+                <img src="assets/blog_02.jpg" alt=""/>
                 <button className="tips-button">Watch<span><ion-icon name="eye-outline"></ion-icon></span></button>
                 <h4>Properly wear a hoodie</h4>
             </div>
         </SwiperSlide>
         <SwiperSlide>
             <div className="tips">
-                <img src="images/blog_03.jpg" alt=""/>
+                <img src="assets/blog_03.jpg" alt=""/>
                 <button className="tips-button">Watch<span><ion-icon name="eye-outline"></ion-icon></span></button>
                 <h4>What should i wear under a sweater?</h4>
             </div>

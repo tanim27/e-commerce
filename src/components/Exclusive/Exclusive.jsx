@@ -9,7 +9,7 @@ function Exclusive() {
                 <div className="features">
                 <div className="left">
                     <div className="promotion about-box">
-                        <img src="images/feature-1.jpg" alt=""/>
+                        <img src="./assets/feature-1.jpg" alt=""/>
                         <div className="description">
                             <h4>Promotions and Discounts</h4>
                             <p>Get 60% off on every spring collection product</p>
@@ -17,7 +17,7 @@ function Exclusive() {
                         </div>
                     </div>
                     <div className="trending about-box">
-                        <img src="images/feature-2.jpg" alt="aaa"/>
+                        <img src="./assets/feature-2.jpg" alt="aaa"/>
                         <div className="description">
                             <h4>Trending Now</h4>
                             <p>Explore the trending world of our products</p>
@@ -28,7 +28,7 @@ function Exclusive() {
 
                 <div className="right">
                     <div className="custom about-box">
-                        <img src="images/feature-3.jpg" alt=""/>
+                        <img src="./assets/feature-3.jpg" alt=""/>
                         <div className="description">
                             <h4>Customize Product</h4>
                             <p>You can customize your design from us.</p>
@@ -36,7 +36,7 @@ function Exclusive() {
                         </div>
                     </div>
                     <div className="blog about-box">
-                        <img src="images/feature-4.jpg" alt=""/>
+                        <img src="./assets/feature-4.jpg" alt=""/>
                         <div className="description">
                             <h4>Blogs On Socials</h4>
                             <p>Explore the influencers on social media</p>

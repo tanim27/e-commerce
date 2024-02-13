@@ -6,7 +6,7 @@ function TopBanner() {
         <div>
             <section className="top-banner">
             <div className="banner">
-                <img className="top-img" src="images/slider_01.jpg" alt="top-img"/>
+                <img className="top-img" src="assets/slider_01.jpg" alt="top-img"/>
                 <div className="moto">
                     <div>
                         <li>Shop better</li>

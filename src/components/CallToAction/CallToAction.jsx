@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import './CallToAction.css';
 
 function CallToAction() {
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,21 +11,21 @@ function CallToAction() {
       } else {
         setShowButton(false);
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll)
     };
-  }, []);
+  }, [])
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    });
-  };
+    })
+  }
 
   return (
     <div>
@@ -33,7 +33,7 @@ function CallToAction() {
         <button className="action-button"><ion-icon name="arrow-up-circle"></ion-icon></button>
       </div>
     </div>
-  );
+  )
 }
 
-export default CallToAction;
+export default CallToAction

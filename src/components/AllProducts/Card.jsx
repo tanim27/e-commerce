@@ -14,8 +14,10 @@ function Card(props) {
         </div>
         <div className="product-title">
           <h5>{props.title}</h5>
-          <p>${props.price}</p>
-          <del>${props.old_price}</del>
+          <div className="price">
+            <del>${props.old_price}</del>
+            <p>${props.price}</p>
+          </div>
         </div>
       </div>
   )
