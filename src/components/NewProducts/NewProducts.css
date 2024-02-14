@@ -34,7 +34,8 @@
 }
 
 .wrapper .container .box img {
-    width: 100%;
+    height: 300px;
+    width: 250px;
     transition: all linear 0.4s;
 }
 
@@ -71,23 +72,22 @@
 
 .wrapper .container .box:hover .hover-icons {
     opacity: 1;
-    transform: translateY(-60px);
+    transform: translateY(-50px);
     z-index: 5;
 }
 
 .wrapper .container .box .hover-icons button {
+    font-size: 1.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 240px;
     border: none;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px 10px;
+    gap: 10px;
     overflow: hidden;
-    font-size: 1.3rem;
-    transition: 0.6s;
+    opacity: 0.7;
+    transition: 0.3s all linear;
     cursor: pointer;
     background-color: #fff;
 }
@@ -97,15 +97,29 @@
     background-color: #111;
 }
 
+.wrapper .container .box .hover-icons button span {
+    font-size: 1rem;
+}
+  
+.wrapper .container .box .blank {
+    transform: translateY(-50px);
+    height: 50px;
+    width: 240px;
+    z-index: 30;
+    background-color: #fff;
+    color: #fff;
+}
+
 .wrapper .container .box .product-title {
     font-family: "Playfair Display", serif;
     font-size: 1.1rem;
-    position: relative;
-    bottom: 20px;
+    transform: translateY(-40px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 240px;
+    background-color: #fff;
 }
 
 @media (max-width:575px) {

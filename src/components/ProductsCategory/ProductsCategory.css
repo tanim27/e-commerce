@@ -72,12 +72,13 @@
 
 .wholepage .box-container .box {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   width: 220px;
-  max-width: 45%;
+  max-width: 50%;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: .6s all;
@@ -107,7 +108,7 @@
   gap: 5px;
   opacity: 0;
   transform: translateY(0);
-  transition: all 0.3s linear;
+  transition: 0.3s linear all;
   z-index: 5;
   overflow: hidden;
 }
@@ -155,11 +156,10 @@
   font-family: "Playfair Display", serif;
   font-size: 1.1rem;
   transform: translateY(-50px);
-  height: 80px;
+  height: 60px;
   width: 220px;
   max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -9,15 +9,17 @@ function Card(props) {
     <Link to={`/productlist/${props.id}`}><img src={props.image} alt={props.title}/></Link>
     <img src={props.hoverimage} alt={props.title} className="hover-img"/>
     
-    <div className="hover-icons">
-      <button><ion-icon name="heart-outline"></ion-icon></button>
-      <Link to={`/productlist/${props.id}`}><button><ion-icon name="eye-outline"></ion-icon></button></Link>
-      <button><ion-icon name="bag-add-outline"></ion-icon></button>
-    </div>
-    <div className="product-title">
+    <Link to={`/productlist/${props.id}`}>
+      <div className="hover-icons"><button><ion-icon name="eye-outline"></ion-icon><span>Preview</span></button></div>
+    </Link>
+
+    <div className="blank">.</div>
+      <div className="product-title">
         <h5>{props.title}</h5>
-        <p>${props.price}</p>
-    </div>
+        <div className="price">
+          <p>${props.price}</p>
+        </div>
+      </div>
     </div>
   )
 }
