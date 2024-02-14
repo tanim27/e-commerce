@@ -92,7 +92,6 @@
 
 .product-showlist .box-container .box {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -118,7 +117,6 @@
 }
 
 .product-showlist .box-container .box .hover-icons {
-  font-size: 1rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -131,6 +129,7 @@
   transition: 0.3s linear all;
   z-index: 5;
   overflow: hidden;
+  color: #111;
 }
 
 .product-showlist .box-container .box:hover .hover-icons {
@@ -160,7 +159,9 @@
 }
 
 .product-showlist .box-container .box .hover-icons button span {
+  font-family: 'Playfair display', serif;
   font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .product-showlist .box-container .box .blank {
