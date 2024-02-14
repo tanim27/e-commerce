@@ -17,10 +17,8 @@ const CartContextProvider = (props) => {
   const addItem = (id, selectedColor, selectedSize) => {
   const productId = `${id}-${selectedColor}-${selectedSize}`
     if (cartItems[productId]) {
-      // If it is, just increment its quantity
       setCartItems((prev) => ({ ...prev, [productId]: prev[productId] + 1 }))
     } else {
-      // If it's not, add it to the cart with quantity 1
       setCartItems((prev) => ({ ...prev, [productId]: 1 }))
     }
   }
@@ -32,7 +30,6 @@ const CartContextProvider = (props) => {
     if (cartItems[productId] > 1) {
       setCartItems((prev) => ({ ...prev, [productId]: prev[productId] - 1 }))
     } else {
-      // If quantity is 1, remove the product from the cart
       const { [productId]: removedItem, ...rest } = cartItems
       setCartItems(rest)
     }

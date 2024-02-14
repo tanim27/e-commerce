@@ -80,15 +80,16 @@
   max-width: 45%;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: .6s;
+  transition: .6s all;
 }
 
 .wholepage .box-container .box img {
   border-radius: 8px 8px 0 0;
-  height: 230px;
-  width: 200px;
+  height: 220px;
+  width: 180px;
   transform: scale(1);
-  transition: all linear 0.4s;
+  transition: 0.3s linear all;
+  z-index: 30;
 }
 
 .wholepage .box-container .box:hover img {
@@ -96,42 +97,40 @@
 }
 
 .wholepage .box-container .box .hover-icons {
+  font-size: 1rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   bottom: 0;
   left: 0;
-  font-size: 1.5rem;
   gap: 5px;
-  z-index: -5;
-  transform: translateY(0);
-  transition: all 0.4s ease-in-out;
   opacity: 0;
+  transform: translateY(0);
+  transition: all 0.3s linear;
+  z-index: 5;
   overflow: hidden;
 }
 
 .wholepage .box-container .box:hover .hover-icons {
   opacity: 1;
   transform: translateY(-40px);
-  z-index: 5;
 }
 
 .wholepage .box-container .box .hover-icons button {
+  font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   height: 40px;
-  width: 40px;
+  width: 200px;
   border: none;
-  border-radius: 10px;
-  margin: 5px;
-  padding: 5px 10px;
+  gap: 10px;
+  opacity: 0.7;
   overflow: hidden;
-  font-size: 1.3rem;
   transition: 0.6s;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .wholepage .box-container .box .hover-icons button:hover {
@@ -139,19 +138,32 @@
   background-color: #111;
 }
 
+.wholepage .box-container .box .hover-icons button span {
+  font-size: 1rem;
+}
+
+.wholepage .box-container .box .blank {
+  transform: translateY(-40px);
+  height: 40px;
+  width: 200px;
+  z-index: 30;
+  background-color: #fff;
+  color: #fff;
+}
+
 .wholepage .box-container .box .product-title {
   font-family: "Playfair Display", serif;
   font-size: 1.1rem;
-  position: relative;
-  bottom: 30px;
-  height: 110px;
-  
+  transform: translateY(-60px);
+  height: 120px;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  z-index: 50;
 }
 
 .wholepage .box-container .box .product-title h5 {
@@ -162,7 +174,7 @@
 
 .wholepage .box-container .box .product-title .price {
   position: relative;
-  top: 5px;
+  top: 0;
   right: 20px;
   display: flex;
   justify-content: center;
