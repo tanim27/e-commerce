@@ -29,6 +29,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 400px;
+    width: 250px;
     max-width: 70%; 
     overflow: hidden;
 }
@@ -36,7 +38,7 @@
 .wrapper .container .box img {
     height: 300px;
     width: 250px;
-    transition: all linear 0.4s;
+    transition: all linear 0.3s;
 }
 
 .wrapper .container .box:hover img {
@@ -82,7 +84,7 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    width: 240px;
+    width: 250px;
     border: none;
     gap: 10px;
     overflow: hidden;
@@ -105,8 +107,8 @@
   
 .wrapper .container .box .blank {
     transform: translateY(-50px);
-    height: 50px;
-    width: 240px;
+    height: 60px;
+    width: 250px;
     z-index: 30;
     background-color: #fff;
     color: #fff;
@@ -115,7 +117,7 @@
 .wrapper .container .box .product-title {
     font-family: "Playfair Display", serif;
     font-size: 1.1rem;
-    transform: translateY(-40px);
+    transform: translateY(-50px);
     display: flex;
     flex-direction: column;
     justify-content: center;
