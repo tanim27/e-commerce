@@ -157,7 +157,7 @@
 .wholepage .box-container .box .product-title {
   font-family: "Playfair Display", serif;
   font-size: 1.1rem;
-  transform: translateY(-40px);
+  transform: translateY(-50px);
   height: 60px;
   width: 220px;
   max-width: 100%;
@@ -328,7 +328,6 @@
     align-items: flex-start;
     width: 90%;
     margin: auto auto 50px auto;
-    gap: 30px;
   }
   
   .wholepage .box-container .box {
@@ -397,5 +396,6 @@
     background: #111;
     color: #eeee;
     cursor: pointer;
+    z-index: 100;
   }
 }
