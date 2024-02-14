@@ -96,7 +96,7 @@ const AllProductsData = [
     gendercategory: "women",
     image: "/assets/product_08.jpg",
     hoverimage: "/assets/product_08b.jpg",
-    title: "Turtle Deep Long Neck Woolen Maroon Colored Sweater",
+    title: "Deep Long Neck Woolen Maroon Colored Sweater",
     old_price: 65,
     price: 53,
     quantity: 10,

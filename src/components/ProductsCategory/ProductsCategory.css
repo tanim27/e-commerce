@@ -76,7 +76,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  width: 180px;
+  width: 220px;
   max-width: 45%;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -85,8 +85,8 @@
 
 .wholepage .box-container .box img {
   border-radius: 8px 8px 0 0;
-  height: 220px;
-  width: 180px;
+  height: 250px;
+  width: 220px;
   transform: scale(1);
   transition: 0.3s linear all;
   z-index: 30;
@@ -123,7 +123,7 @@
   justify-content: center;
   align-items: center;
   height: 40px;
-  width: 200px;
+  width: 220px;
   border: none;
   gap: 10px;
   opacity: 0.7;
@@ -145,7 +145,7 @@
 .wholepage .box-container .box .blank {
   transform: translateY(-40px);
   height: 40px;
-  width: 200px;
+  width: 220px;
   z-index: 30;
   background-color: #fff;
   color: #fff;
@@ -154,8 +154,9 @@
 .wholepage .box-container .box .product-title {
   font-family: "Playfair Display", serif;
   font-size: 1.1rem;
-  transform: translateY(-60px);
-  height: 120px;
+  transform: translateY(-50px);
+  height: 80px;
+  width: 220px;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -164,9 +165,15 @@
   align-items: center;
   gap: 5px;
   z-index: 50;
+  background-color: #fff;
 }
 
 .wholepage .box-container .box .product-title h5 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0 5px;
   height: auto;
   width: 100%;
