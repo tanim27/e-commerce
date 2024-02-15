@@ -9,7 +9,7 @@ footer {
     height: auto;
     width: 100%;
     background-color: #eeee;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   
   footer .top-side {
