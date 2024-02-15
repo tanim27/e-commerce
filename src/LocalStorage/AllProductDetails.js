@@ -112,7 +112,7 @@ const AllProductsData = [
     title: "Maroon Check Round Necked Black Casual T",
     old_price: 75,
     price: 57,
-    quantity: 7,
+    quantity: 10,
     color: ["Maroon","White"],
     size: ["m", "l", "xl", "xxl"],
   },
