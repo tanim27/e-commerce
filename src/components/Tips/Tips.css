@@ -1,5 +1,6 @@
 .tips-section {
     width: 100%;
+    overflow-x: hidden;
 }
 
 .tips-section .tips-section-title {

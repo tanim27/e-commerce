@@ -1,5 +1,5 @@
 footer {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,67 +9,68 @@ footer {
     height: auto;
     width: 100%;
     background-color: #eeee;
-}
-
-footer .top-side {
+    overflow-x: hidden;
+  }
+  
+  footer .top-side {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 30px 80px;
     gap: 100px;
-}
-
-/* Left Top Side */ 
-footer .top-side .left {
+  }
+  
+  /* Left Top Side */
+  footer .top-side .left {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 50px;
-}
-
-footer .top-side .left .left-top {
+  }
+  
+  footer .top-side .left .left-top {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-footer .top-side .left .left-top h4 {
+  }
+  
+  footer .top-side .left .left-top h4 {
     font-size: 1.1rem;
-}
-
-footer .top-side .left .left-top li {
+  }
+  
+  footer .top-side .left .left-top li {
     text-decoration: none;
     font-size: 14px;
     width: 100%;
     cursor: pointer;
-    transition: .6s all;
-}
-
-footer .top-side .left .left-top li:hover {
+    transition: 0.6s all;
+  }
+  
+  footer .top-side .left .left-top li:hover {
     opacity: 0.7;
     transform: translateX(10px);
-}
-
-/*Right Top Side */
-
-footer .top-side .right-top {
+  }
+  
+  /*Right Top Side */
+  
+  footer .top-side .right-top {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 0;
     gap: 10px;
-}
-
-footer .top-side .right-top form {
+  }
+  
+  footer .top-side .right-top form {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-footer .top-side .right-top form input {
-    font-family: 'Playfair Display', serif;
+  }
+  
+  footer .top-side .right-top form input {
+    font-family: "Playfair Display", serif;
     height: 30px;
     width: 100%;
     margin: 8px 0;
@@ -79,10 +80,10 @@ footer .top-side .right-top form input {
     outline: none;
     font-size: 14px;
     background-color: #fff;
-}
-
-footer .top-side .right-top form button {
-    font-family: 'Playfair Display SC', serif;
+  }
+  
+  footer .top-side .right-top form button {
+    font-family: "Playfair Display SC", serif;
     font-weight: 600;
     text-transform: uppercase;
     display: flex;
@@ -97,74 +98,72 @@ footer .top-side .right-top form button {
     color: #fff;
     cursor: pointer;
     transition: 0.6s all;
-}
-
-footer .top-side .right-top form button:hover {
+  }
+  
+  footer .top-side .right-top form button:hover {
     background-color: grey;
-}
-
-footer .top-side .right-top form button span {
+  }
+  
+  footer .top-side .right-top form button span {
     color: #fff;
     font-size: 12px;
     letter-spacing: 3px;
-}
-
-footer .top-side .right-top form button span:hover {
+  }
+  
+  footer .top-side .right-top form button span:hover {
     color: #111;
-}
+  }
 
-/* Bottom Side */
-
-footer .bottom-side {
+  /* Bottom Side */
+  
+  footer .bottom-side {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     gap: 30px;
-}
-
-footer .bottom-side .icons {
+  }
+  
+  footer .bottom-side .icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-
-footer .bottom-side .icons li {
+  }
+  
+  footer .bottom-side .icons li {
     padding: 0 15px;
     transition: all 0.6s ease;
-}
-
-footer .bottom-side .icons li:hover {
+  }
+  
+  footer .bottom-side .icons li:hover {
     opacity: 0.5;
     transform: translateY(-5px);
-}
-
-
-@media (max-width:768px) {
-   
+  }
+  
+  @media (max-width: 768px) {
     footer .top-side {
-        flex-direction: column;
-        gap: 40px;
+      flex-direction: column;
+      gap: 40px;
     }
-
+  
     footer .top-side .left {
-        gap: 40px;
+      gap: 40px;
     }
-
+  
     footer .top-side .left .left-top {
-        gap: 10px;
+      gap: 10px;
     }
-
+  
     footer .top-side .right-top {
-        margin-left: 0;
+      margin-left: 0;
     }
-
+  
     footer .bottom-side {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-    }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
 }
+}
+  

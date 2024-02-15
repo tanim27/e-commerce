@@ -27,7 +27,7 @@ function NewProducts() {
 
   return (
     <div>
-    <div className="wrapper">
+      <div className="wrapper">
       <h2 className="new-arrival-heading">New Arrivals</h2>
         <Swiper
           pagination={{

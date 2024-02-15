@@ -11,7 +11,7 @@ function ProductsCategory() {
   const gendercategories = ["All", "Men", "Women"];
   const prices = ["All", "0-49", "50-99", "100-149", "150-199", "200+"];
   const sizes = ["All", "s", "m", "l", "xl", "xxl"];
-  const colors = ["All", "Blue", "Green", "Brown", "Pink", "White", "Black"];
+  const colors = ["All", "Blue", "Green", "Brown", "Pink", "White", "Black","Tosca"];
 
   const [selectedCategory, setSelectedCategory] = useState("All Products");
   const [selectedGender, setSelectedGender] = useState("All");
