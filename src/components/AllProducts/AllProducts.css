@@ -226,13 +226,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
+    width: 90%;
     gap: 15px;
   }
 
   .product-showlist .box-container .box {
     height: 350px;
-    max-width: 50%;
+    max-width: 45%;
   }
 
   .product-showlist .box-container .box img {
