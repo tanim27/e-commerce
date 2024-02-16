@@ -50,7 +50,6 @@ function Navigation() {
 <div className="header-left">
     <div className="left-inline">
         <div className="disclaimer">Disc.</div>
-        <div className="heart-icon"><ion-icon name="heart-outline"></ion-icon></div>
     </div>
     <div className="menu-icon" onClick={toggleNavbar}><ion-icon name="menu"></ion-icon></div>
 </div>

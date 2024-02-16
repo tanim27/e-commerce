@@ -406,6 +406,7 @@ header {
     height: 380px;
     overflow-x: hidden;
     overflow-y: scroll;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
   }
 
   .searchbar .all-searched-products::-webkit-scrollbar {
