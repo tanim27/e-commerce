@@ -227,15 +227,29 @@
     justify-content: center;
     align-items: flex-start;
     width: 90%;
-    gap: 15px;
+    gap: 25px;
   }
 
   .product-showlist .box-container .box {
-    height: 350px;
+    height: 320px;
     max-width: 45%;
   }
 
   .product-showlist .box-container .box img {
     height: 200px;
+  }
+
+  .product-showlist .box-container .box .hover-icons button {
+    height: 40px;
+  }
+
+  .product-showlist .box-container .box .blank {
+    transform: translateY(-50px);
+    height: 30px;
+  }
+
+  .product-showlist .box-container .box .product-title {
+    transform: translateY(-50px);
+    height: 60px;
   }
 }

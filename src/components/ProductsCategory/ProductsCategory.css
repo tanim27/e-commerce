@@ -329,10 +329,20 @@
     align-items: flex-start;
     width: 90%;
     margin: auto auto 50px auto;
+    gap: 25px;
   }
   
   .wholepage .box-container .box {
+    height: 300px;
     max-width: 45%;
+  }
+
+  .wholepage .box-container .box img {
+    height: 200px;
+  }
+
+  .wholepage .box-container .box .blank {
+    height: 30px;
   }
 
   .wholepage .leftbar {
@@ -348,7 +358,7 @@
     width: 50%;
     border: none;
     background: #eeee;
-    z-index: 100;
+    z-index: 120;
     transition: all 0.5s ease;
     
   }
@@ -383,7 +393,7 @@
 
   .wholepage .filter-button {
     position: fixed;
-    top: 250px;
+    top: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
