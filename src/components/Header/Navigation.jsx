@@ -22,6 +22,7 @@ function Navigation() {
     }
 
     function searchclick () {
+        setProducts([])
         setsearchBoxOpen(!searchBoxOpen)
     }
 
@@ -91,6 +92,7 @@ function Navigation() {
 {
     searchBoxOpen && 
 <div className="searchbar">
+
     <div className="searchbox">
         <form action="">
         <div className="searchbox-icons"><ion-icon name="search-outline"></ion-icon></div>
@@ -98,9 +100,13 @@ function Navigation() {
         <div className="searchbox-icons" onClick={searchclick}><ion-icon name="close"></ion-icon></div>
         </form>
     </div>
+
+    <div className="all-searched-products">
     {products.map(prod => (
-        <SearchProductCard key={prod.id} {...prod} prod={prod} />
+        <SearchProductCard key={prod.id} {...prod} prod={prod}/>
     ))}
+    </div>
+    
 </div>
 }
 

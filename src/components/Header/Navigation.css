@@ -352,9 +352,8 @@ header {
 .searchbar {
     position: fixed;
     top: 0;
-    height: 50px;
     width: 100%;
-    z-index: 200;
+    z-index: 2000;
   }
   
   .searchbar .searchbox {
@@ -402,8 +401,29 @@ header {
     outline: none;
     background: none;
   }
+
+  .searchbar .all-searched-products {
+    height: 380px;
+    overflow-y: scroll;
+  }
+
+  .searchbar .all-searched-products::-webkit-scrollbar {
+    width: 10px;
+  }
   
-  .searchbar .product-description {
+  .searchbar .all-searched-products::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .searchbar .all-searched-products::-webkit-scrollbar-thumb {
+    opacity: 0.4;
+    background: grey;
+    background-clip: content-box;
+    border: 1px solid transparent;
+    border-radius: 10px;
+  }
+  
+  .searchbar .all-searched-products .product-description {
     position: relative;
     top: 0;
     left: 0;
@@ -411,11 +431,11 @@ header {
     height: auto;
     width: 100%;
     padding-bottom: 20px;
-    border-bottom: 1px solid #dddd;
-    background: silver;
+    border-bottom: 1px solid #fff;
+    background: #dddd;
   }
   
-  .searchbar .product-description img {
+  .searchbar .all-searched-products .product-description img {
     position: relative;
     top: 10px;
     left: 20px;
@@ -423,7 +443,7 @@ header {
     width: 60px;
   }
   
-  .searchbar .product-description .detail {
+  .searchbar .all-searched-products .product-description .detail {
     font-family: 'Playfair display', serif;
     position: relative;
     top: 10px;
@@ -432,12 +452,12 @@ header {
     width: 80%;
   }
 
-  .searchbar .product-description .detail h5 {
+  .searchbar .all-searched-products .product-description .detail h5 {
     height: auto;
     width: 100%;
   }
   
-  .searchbar .product-description .detail p {
+  .searchbar .all-searched-products .product-description .detail p {
     font-family: "Playfair display", serif;
     color: #111;
   }
@@ -461,7 +481,7 @@ header {
       background: none;
     }
 
-    .searchbar .product-description .detail h5 {
+    .searchbar .all-searched-products .product-description .detail h5 {
       height: auto;
       width: 70%;
     }

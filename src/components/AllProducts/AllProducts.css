@@ -226,11 +226,16 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     gap: 15px;
   }
 
   .product-showlist .box-container .box {
-    max-width: 45%;
+    height: 350px;
+    max-width: 50%;
+  }
+
+  .product-showlist .box-container .box img {
+    height: 200px;
   }
 }
