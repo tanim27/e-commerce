@@ -197,8 +197,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
   gap: 5px;
+}
+
+.checkout .major .major-right .order-summary .item-detail .text-detail h5 {
+  width: 70%;
 }
 
 .checkout .major .major-right .payment-summary {
