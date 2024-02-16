@@ -59,12 +59,12 @@ function Navigation() {
     <div className={`navbar ${isNavbarActive ? "navbar-active" : ""}`}>
         <div className="close-icon" onClick={toggleNavbar}><ion-icon name="close"></ion-icon></div>
         <div className="navigations">
-            <Link to="/"><li className="navigation-bottom">Home</li></Link>
-            <Link to="/productlist"><li className="navigation-bottom">Products</li></Link>  
+            <Link to="/"><li className="navigation-bottom" onClick={toggleNavbar}>Home</li></Link>
+            <Link to="/productlist"><li className="navigation-bottom" onClick={toggleNavbar}>Products</li></Link>  
         </div>
         <div className="navigations">
-            <li className="navigation-bottom">Specials</li>
-            <li className="navigation-bottom">Sale</li>
+            <li className="navigation-bottom" onClick={toggleNavbar}>Specials</li>
+            <li className="navigation-bottom" onClick={toggleNavbar}>Sale</li>
         </div>
     </div>
     <div className="branding">BiShop</div>

@@ -404,6 +404,7 @@ header {
 
   .searchbar .all-searched-products {
     height: 380px;
+    overflow-x: hidden;
     overflow-y: scroll;
   }
 

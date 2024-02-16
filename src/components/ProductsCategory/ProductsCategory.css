@@ -345,6 +345,10 @@
     height: 30px;
   }
 
+  .wholepage .box-container .box .product-title {
+    transform: translateY(-40px);
+  }
+
   .wholepage .leftbar {
     position: fixed;
     top: 0;
