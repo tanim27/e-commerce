@@ -1,8 +1,47 @@
-import React from 'react'
-import ReactModal from 'react-modal'
-import './LogInForm.css'
+import React, { useState } from 'react';
+import ReactModal from 'react-modal';
+import './LogInForm.css';
 
 function LogInForm({ visible, close }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({});
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errors = {};
+
+    if (!email) {
+      errors.email = '* Email is required';
+    }
+
+    if (!password) {
+      errors.password = '* Password is required';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setErrors(errors);
+      return;
+    }
+
+    console.log('Form submitted with:', { email, password });
+
+    alert(`Hi ${email}, you just logged in`)
+
+    setEmail('');
+    setPassword('');
+    setErrors({});
+    close();
+  };
+
   return (
     <div>
       <ReactModal
@@ -10,7 +49,7 @@ function LogInForm({ visible, close }) {
         onRequestClose={close}
         style={{
           content: {
-            height: "500px",
+            height: "550px",
             width: "400px",
             top: "50%",
             left: "50%",
@@ -27,23 +66,27 @@ function LogInForm({ visible, close }) {
         }}>
         <section className="container-login">
           <div className="close-login"><ion-icon name="close" onClick={close}></ion-icon></div>
-          <form className="log-in">
+          <div className="login-box">
             <h2>Sign In with</h2>
-            <div className="social-icons">
-              <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
-              <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-              <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-            </div>
-            <span>Or use your email & password to login</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <span><a href="">Forgot your password?</a></span>
-            <button type="submit"><a href="">Sign In</a></button>
-          </form>
+            <form className="log-in" onSubmit={handleSubmit}>
+              <div className="social-icons">
+                <div className="social-icons-buttons"><ion-icon name="logo-instagram"></ion-icon></div>
+                <div className="social-icons-buttons"><ion-icon name="logo-facebook"></ion-icon></div>
+                <div className="social-icons-buttons"><ion-icon name="logo-twitter"></ion-icon></div>
+              </div>
+              <div className="instruction">Or use your email & password to login</div>
+              <input type="email" name="email" placeholder="Email" value={email} onChange={handleEmailChange} />
+              {errors.email && <span className="error">{errors.email}</span>}
+              <input type="password" name="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
+              {errors.password && <span className="error">{errors.password}</span>}
+              <div className="forgot-pass">Forgot your password?</div>
+              <button type="submit"><span>Sign In</span></button>
+            </form>
+          </div>
         </section>
       </ReactModal>
     </div>
-  )
+  );
 }
 
-export default LogInForm
+export default LogInForm;

@@ -1,12 +1,17 @@
-import React, { useContext } from "react"
-import { Link } from 'react-router-dom'
-import { CartContext } from './../../LocalStorage/CartContext'
-import "./CartProducts.css"
+import React, { useContext, useState } from "react";
+import { Link } from 'react-router-dom';
+import { CartContext } from './../../LocalStorage/CartContext';
+import "./CartProducts.css";
 
 function CartProducts() {
-  const { AllProductsData, cartItems, addItem, removeItem, totalAmount } = useContext(CartContext)
+  const { AllProductsData, cartItems, addItem, removeItem, totalAmount } = useContext(CartContext);
+  const [agreed, setAgreed] = useState(false); // Initialize agreed state as false
 
-  const filterCartItems = Object.keys(cartItems).filter(cartItemId => cartItems[cartItemId]>0)
+  const filterCartItems = Object.keys(cartItems).filter(cartItemId => cartItems[cartItemId] > 0);
+
+  const handleAgree = () => {
+    setAgreed(!agreed); // Toggle agreed state
+  }
 
   return (
     <div>
@@ -27,7 +32,7 @@ function CartProducts() {
         <hr />
         {filterCartItems.map((cartItemId) => {
           const [id, color, size] = cartItemId.split('-');
-          const product = AllProductsData.find(product => product.id === parseInt(id))
+          const product = AllProductsData.find(product => product.id === parseInt(id));
 
           if (product) {
             return (
@@ -58,20 +63,21 @@ function CartProducts() {
               </div>
             )
           }
-          return null
+          return null;
         })}
         <div className="total-price">Subtotal: ${totalAmount()}</div>
       </div>
       <div className="verify-section">
-        <div>
-          <input type="radio"></input>I agree to terms and conditions
+        <div className="verify">
+          <input type="radio" onClick={handleAgree}></input>
+          <div>I agree to terms and conditions</div>
         </div>
         <Link to="/billing">
-          <button type="submit" className="checkout-button">Check Out</button>
+          <button className={`checkout-button ${agreed ? "active" : ""}`} disabled={!agreed}>Check Out</button>
         </Link>
       </div>
     </div>
   )
 }
 
-export default CartProducts
+export default CartProducts;
