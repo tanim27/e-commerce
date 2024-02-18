@@ -1,5 +1,6 @@
 import React from 'react'
 import './TopBanner.css'
+import { Link } from 'react-router-dom'
 
 function TopBanner() {
     return (
@@ -12,7 +13,7 @@ function TopBanner() {
                         <li>Shop better</li>
                         <li>get the best experience</li>
                     </div>
-                    <p>Shop Now</p>
+                    <Link to="/productlist"><p>Shop Now</p></Link>
                 </div>
             </div>
             </section>
